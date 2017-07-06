@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		85A4C5553A53F242827CF1C6 /* Pods_KeyboardAvoidingView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE417170326D19047AE8C2A /* Pods_KeyboardAvoidingView_Example.framework */; };
+		B05D8C641F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif in Resources */ = {isa = PBXBuildFile; fileRef = B05D8C631F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif */; };
 		B0FBD92C1F0D5FA700848ADE /* UIView+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */; };
 		B0FBD92E1F0D5FC000848ADE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92D1F0D5FC000848ADE /* TextField.swift */; };
 		B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		74D362DCD56DAE51046FED1C /* Pods_KeyboardAvoidingView_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAvoidingView_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B05D8C631F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = KeyboardAvoidingClip.gif; sourceTree = "<group>"; };
 		B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Storyboard.swift"; sourceTree = "<group>"; };
 		B0FBD92D1F0D5FC000848ADE /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BC527DE7A0DE9DB49F3E0778 /* Pods-KeyboardAvoidingView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				B05D8C621F0E7A2D0039A8B2 /* Gifs */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for KeyboardAvoidingView";
@@ -146,6 +149,14 @@
 				44D0F72030B1EC613BED2B9C /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B05D8C621F0E7A2D0039A8B2 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				B05D8C631F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif */,
+			);
+			path = Gifs;
 			sourceTree = "<group>";
 		};
 		DC98895727ACFE5C3342E9CC /* Pods */ = {
@@ -262,6 +273,7 @@
 			files = (
 				B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				B05D8C641F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
