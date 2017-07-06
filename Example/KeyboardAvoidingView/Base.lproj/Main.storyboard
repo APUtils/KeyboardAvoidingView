@@ -109,9 +109,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Layout Guide" id="hvc-7H-aef"/>
-                    <connections>
-                        <outlet property="userNameTextField" destination="xkt-7q-fxm" id="jp4-J1-kSh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WD2-2b-LDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,9 +213,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="7H6-67-f2j"/>
                     <navigationItem key="navigationItem" id="Cku-2A-W3Q"/>
-                    <connections>
-                        <outlet property="userNameTextField" destination="5Da-mu-sVp" id="Cc8-W3-nqf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gse-6c-CfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,9 +274,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="EhG-Gz-oaE"/>
-                    <connections>
-                        <outlet property="userNameTextField" destination="OB4-HH-Mzk" id="rx8-mu-Pex"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzk-Vd-veL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,4 @@
 
 import UIKit
 
-public class ViewController: UIViewController {
-    @IBOutlet public weak var userNameTextField: UITextField!
-}
+public class ViewController: UIViewController {}
