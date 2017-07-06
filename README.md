@@ -26,7 +26,7 @@ pod "KeyboardAvoidingView"
 
 ## Author
 
-anton-plebanovich, anton.plebanovich@itechart-group.com
+Anton Plebanovich, anton.plebanovich@gmail.com
 
 ## License
 
