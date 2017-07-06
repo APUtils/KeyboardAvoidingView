@@ -158,7 +158,7 @@ public class KeyboardAvoidingView: UIView {
                 // Setup with frame height
                 let frameInRoot = self.convert(self.bounds, to: self.rootView)
                 let visibleHeight = endFrame.minY - frameInRoot.minY
-                var newHeight = min(visibleHeight, defaultHeight)
+                let newHeight = min(visibleHeight, defaultHeight)
                 
                 self.frame.size.height = newHeight
             }
