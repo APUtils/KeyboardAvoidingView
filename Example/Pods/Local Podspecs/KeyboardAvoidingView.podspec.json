@@ -1,0 +1,22 @@
+{
+  "name": "KeyboardAvoidingView",
+  "version": "0.1.0",
+  "summary": "A short description of KeyboardAvoidingView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/anton-plebanovich/KeyboardAvoidingView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Anton Plebanovich": "anton.plebanovich@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/anton-plebanovich/KeyboardAvoidingView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "KeyboardAvoidingView/Classes/**/*"
+}

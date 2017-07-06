@@ -52,6 +52,16 @@
                ReferencedContainer = "container:KeyboardAvoidingView.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B0FBD9381F0D728000848ADE"
+               BuildableName = "KeyboardAvoidingView_UITests.xctest"
+               BlueprintName = "KeyboardAvoidingView_UITests"
+               ReferencedContainer = "container:KeyboardAvoidingView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

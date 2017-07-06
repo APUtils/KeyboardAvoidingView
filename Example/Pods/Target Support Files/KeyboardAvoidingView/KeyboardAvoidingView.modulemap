@@ -1,0 +1,6 @@
+framework module KeyboardAvoidingView {
+  umbrella header "KeyboardAvoidingView-umbrella.h"
+
+  export *
+  module * { export * }
+}
