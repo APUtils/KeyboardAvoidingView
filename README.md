@@ -24,6 +24,12 @@ it, simply add the following line to your Podfile:
 pod "KeyboardAvoidingView"
 ```
 
+## Usage
+
+Common usage: set `KeyboardAvoidingView` class to any view in storyboard (usually it's base container) that you want to adjust it's bottom constraint or frame height to avoid keyboard.
+
+<img src="Example/KeyboardAvoidingView/Images/KeyboardAvoidingClassSelect.png"/>
+
 ## Author
 
 Anton Plebanovich, anton.plebanovich@gmail.com
