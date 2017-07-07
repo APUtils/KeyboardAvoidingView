@@ -13,6 +13,10 @@ private extension UIView {
     var rootView: UIView {
         return superview?.rootView ?? self
     }
+    
+    var superviews: AnySequence<UIView> {
+        return sequence(first: self, next: { $0.superview }).dropFirst(1)
+    }
 }
 
 //-----------------------------------------------------------------------------
@@ -182,25 +186,25 @@ public class KeyboardAvoidingView: UIView {
     //-----------------------------------------------------------------------------
     
     private func getBottomConstraint() -> NSLayoutConstraint? {
-        guard let superview = superview else { return nil }
-        
-        let constraints = superview.constraints
-        for constraint in constraints {
-            if (constraint.firstItem === self && constraint.secondItem === superview) || (constraint.secondItem === self && constraint.firstItem === superview) {
-                // Constraint from superview to view. Check if it is bottom constraint.
-                if constraint.firstAttribute == .bottom && constraint.secondAttribute == .bottom {
-                    // Return
-                    return constraint
-                }
-            } else if constraint.firstItem === self && constraint.secondItem is UILayoutSupport {
-                // Constraint from view to layout guide. Check if it is bottom constraint.
-                if constraint.firstAttribute == .bottom {
-                    return constraint
-                }
-            } else if constraint.secondItem === self && constraint.firstItem is UILayoutSupport {
-                // Constraint from layout guide to view. Check if it is bottom constraint.
-                if constraint.secondAttribute == .bottom {
-                    return constraint
+        for superview in superviews {
+            let constraints = superview.constraints
+            for constraint in constraints {
+                if (constraint.firstItem === self && constraint.secondItem === superview) || (constraint.secondItem === self && constraint.firstItem === superview) {
+                    // Constraint from superview to view. Check if it is bottom constraint.
+                    if constraint.firstAttribute == .bottom && constraint.secondAttribute == .bottom {
+                        // Return
+                        return constraint
+                    }
+                } else if constraint.firstItem === self && constraint.secondItem is UILayoutSupport {
+                    // Constraint from view to layout guide. Check if it is bottom constraint.
+                    if constraint.firstAttribute == .bottom {
+                        return constraint
+                    }
+                } else if constraint.secondItem === self && constraint.firstItem is UILayoutSupport {
+                    // Constraint from layout guide to view. Check if it is bottom constraint.
+                    if constraint.secondAttribute == .bottom {
+                        return constraint
+                    }
                 }
             }
         }
