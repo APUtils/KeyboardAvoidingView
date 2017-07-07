@@ -30,9 +30,18 @@ pod "KeyboardAvoidingView"
 
 Just set `KeyboardAvoidingView` class to any view in storyboard (usually it's base container) that you want to adjust it's bottom constraint or frame height to avoid keyboard. 
 
-In most cases it should be only one `KeyboardAvoidingView` for screen. Be sure to not create nested `KeyboardAvoidingView`'s.
-
 <img src="Example/KeyboardAvoidingView/Images/KeyboardAvoidingClassSelect.png"/>
+
+It's also possible to create it from code:
+```swift
+let keyboardAvoidingView = KeyboardAvoidingView(frame: containerView.bounds)
+keyboardAvoidingView.translatesAutoresizingMaskIntoConstraints = true
+keyboardAvoidingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+containerView.addSubview(keyboardAvoidingView)
+```
+
+In most cases it should be only one `KeyboardAvoidingView` for screen. Be sure to not create nested `KeyboardAvoidingView`'s.
 
 See example project for more details.
 
