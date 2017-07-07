@@ -1,6 +1,6 @@
 # KeyboardAvoidingView
 
-[![CI Status](http://img.shields.io/travis/anton-plebanovich/KeyboardAvoidingView.svg?style=flat)](https://travis-ci.org/anton-plebanovich/KeyboardAvoidingView)
+[![CI Status](http://img.shields.io/travis/APUtils/KeyboardAvoidingView.svg?style=flat)](https://travis-ci.org/APUtils/KeyboardAvoidingView)
 [![Version](https://img.shields.io/cocoapods/v/KeyboardAvoidingView.svg?style=flat)](http://cocoapods.org/pods/KeyboardAvoidingView)
 [![License](https://img.shields.io/cocoapods/l/KeyboardAvoidingView.svg?style=flat)](http://cocoapods.org/pods/KeyboardAvoidingView)
 [![Platform](https://img.shields.io/cocoapods/p/KeyboardAvoidingView.svg?style=flat)](http://cocoapods.org/pods/KeyboardAvoidingView)
@@ -28,7 +28,9 @@ pod "KeyboardAvoidingView"
 
 ## Usage
 
-Common usage: set `KeyboardAvoidingView` class to any view in storyboard (usually it's base container) that you want to adjust it's bottom constraint or frame height to avoid keyboard.
+Just set `KeyboardAvoidingView` class to any view in storyboard (usually it's base container) that you want to adjust it's bottom constraint or frame height to avoid keyboard. 
+
+In most cases it should be only one `KeyboardAvoidingView` for screen. Be sure to not create nested `KeyboardAvoidingView`'s.
 
 <img src="Example/KeyboardAvoidingView/Images/KeyboardAvoidingClassSelect.png"/>
 
