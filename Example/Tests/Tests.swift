@@ -61,9 +61,8 @@ class MainSpec: QuickSpec {
                 
                 context("aligned with frame", {
                     beforeEach {
-                        keyboardAvoidingView.translatesAutoresizingMaskIntoConstraints = true
+                        keyboardAvoidingView.translatesAutoresizingMaskIntoConstraints = false
                         keyboardAvoidingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                        keyboardAvoidingView.frame = containerView.bounds
                         
                         containerView.addSubview(keyboardAvoidingView)
                     }

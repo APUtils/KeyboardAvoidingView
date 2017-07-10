@@ -16,7 +16,9 @@
 		85A4C5553A53F242827CF1C6 /* Pods_KeyboardAvoidingView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE417170326D19047AE8C2A /* Pods_KeyboardAvoidingView_Example.framework */; };
 		B05D8C641F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif in Resources */ = {isa = PBXBuildFile; fileRef = B05D8C631F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif */; };
 		B05D8C681F0FB8160039A8B2 /* KeyboardAvoidingClassSelect.png in Resources */ = {isa = PBXBuildFile; fileRef = B05D8C671F0FB8160039A8B2 /* KeyboardAvoidingClassSelect.png */; };
-		B05D8C771F0FD74D0039A8B2 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = B05D8C761F0FD74D0039A8B2 /* CHANGELOG.md */; };
+		B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CC1F13AFCE00A02878 /* .cocoadocs.yml */; };
+		B06687D01F13AFCE00A02878 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B06687CD1F13AFCE00A02878 /* .gitignore */; };
+		B06687D11F13AFCE00A02878 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CE1F13AFCE00A02878 /* .travis.yml */; };
 		B0FBD92C1F0D5FA700848ADE /* UIView+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */; };
 		B0FBD92E1F0D5FC000848ADE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92D1F0D5FC000848ADE /* TextField.swift */; };
 		B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -57,6 +59,9 @@
 		B05D8C631F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = KeyboardAvoidingClip.gif; sourceTree = "<group>"; };
 		B05D8C671F0FB8160039A8B2 /* KeyboardAvoidingClassSelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyboardAvoidingClassSelect.png; sourceTree = "<group>"; };
 		B05D8C761F0FD74D0039A8B2 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		B06687CC1F13AFCE00A02878 /* .cocoadocs.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .cocoadocs.yml; path = ../.cocoadocs.yml; sourceTree = "<group>"; };
+		B06687CD1F13AFCE00A02878 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		B06687CE1F13AFCE00A02878 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Storyboard.swift"; sourceTree = "<group>"; };
 		B0FBD92D1F0D5FC000848ADE /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BC527DE7A0DE9DB49F3E0778 /* Pods-KeyboardAvoidingView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,10 +154,13 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */,
+				B06687CC1F13AFCE00A02878 /* .cocoadocs.yml */,
+				B06687CD1F13AFCE00A02878 /* .gitignore */,
+				B06687CE1F13AFCE00A02878 /* .travis.yml */,
 				B05D8C761F0FD74D0039A8B2 /* CHANGELOG.md */,
-				48DF8B513F1AE6906B8FADC1 /* README.md */,
+				103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */,
 				44D0F72030B1EC613BED2B9C /* LICENSE */,
+				48DF8B513F1AE6906B8FADC1 /* README.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -286,9 +294,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05D8C681F0FB8160039A8B2 /* KeyboardAvoidingClassSelect.png in Resources */,
+				B06687D01F13AFCE00A02878 /* .gitignore in Resources */,
+				B06687D11F13AFCE00A02878 /* .travis.yml in Resources */,
 				B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				B05D8C641F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif in Resources */,
+				B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +412,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				B05D8C771F0FD74D0039A8B2 /* CHANGELOG.md in Sources */,
 				B0FBD92C1F0D5FA700848ADE /* UIView+Storyboard.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				B0FBD92E1F0D5FC000848ADE /* TextField.swift in Sources */,
