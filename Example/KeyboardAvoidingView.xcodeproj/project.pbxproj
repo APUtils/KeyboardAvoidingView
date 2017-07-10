@@ -14,8 +14,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		85A4C5553A53F242827CF1C6 /* Pods_KeyboardAvoidingView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE417170326D19047AE8C2A /* Pods_KeyboardAvoidingView_Example.framework */; };
-		B05D8C641F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif in Resources */ = {isa = PBXBuildFile; fileRef = B05D8C631F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif */; };
-		B05D8C681F0FB8160039A8B2 /* KeyboardAvoidingClassSelect.png in Resources */ = {isa = PBXBuildFile; fileRef = B05D8C671F0FB8160039A8B2 /* KeyboardAvoidingClassSelect.png */; };
 		B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CC1F13AFCE00A02878 /* .cocoadocs.yml */; };
 		B06687D01F13AFCE00A02878 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B06687CD1F13AFCE00A02878 /* .gitignore */; };
 		B06687D11F13AFCE00A02878 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CE1F13AFCE00A02878 /* .travis.yml */; };
@@ -111,44 +109,44 @@
 		607FACD21AFB9204008FA782 /* Example for KeyboardAvoidingView */ = {
 			isa = PBXGroup;
 			children = (
+				B05D8C621F0E7A2D0039A8B2 /* _Gifs */,
+				B05D8C661F0FB8160039A8B2 /* _Images */,
+				607FACD31AFB9204008FA782 /* _Supporting Files */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				B0FBD92D1F0D5FC000848ADE /* TextField.swift */,
-				B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				B05D8C621F0E7A2D0039A8B2 /* Gifs */,
-				B05D8C661F0FB8160039A8B2 /* Images */,
-				607FACD31AFB9204008FA782 /* Supporting Files */,
+				B0FBD92D1F0D5FC000848ADE /* TextField.swift */,
+				B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
 			name = "Example for KeyboardAvoidingView";
 			path = KeyboardAvoidingView;
 			sourceTree = "<group>";
 		};
-		607FACD31AFB9204008FA782 /* Supporting Files */ = {
+		607FACD31AFB9204008FA782 /* _Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = "_Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				607FACE91AFB9204008FA782 /* _Supporting Files */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
+		607FACE91AFB9204008FA782 /* _Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = "_Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
@@ -165,19 +163,21 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		B05D8C621F0E7A2D0039A8B2 /* Gifs */ = {
+		B05D8C621F0E7A2D0039A8B2 /* _Gifs */ = {
 			isa = PBXGroup;
 			children = (
 				B05D8C631F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif */,
 			);
+			name = _Gifs;
 			path = Gifs;
 			sourceTree = "<group>";
 		};
-		B05D8C661F0FB8160039A8B2 /* Images */ = {
+		B05D8C661F0FB8160039A8B2 /* _Images */ = {
 			isa = PBXGroup;
 			children = (
 				B05D8C671F0FB8160039A8B2 /* KeyboardAvoidingClassSelect.png */,
 			);
+			name = _Images;
 			path = Images;
 			sourceTree = "<group>";
 		};
@@ -293,12 +293,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B05D8C681F0FB8160039A8B2 /* KeyboardAvoidingClassSelect.png in Resources */,
 				B06687D01F13AFCE00A02878 /* .gitignore in Resources */,
 				B06687D11F13AFCE00A02878 /* .travis.yml in Resources */,
 				B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				B05D8C641F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif in Resources */,
 				B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
