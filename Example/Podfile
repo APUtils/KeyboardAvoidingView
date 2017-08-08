@@ -7,6 +7,10 @@ inhibit_all_warnings!
 # Add pods as frameworks so we could add obj-c and swift 3.0 pods
 use_frameworks!
 
+# Cartage support
+install! 'cocoapods',
+    :share_schemes_for_development_pods => true
+
 
 target 'KeyboardAvoidingView_Example' do
     pod 'KeyboardAvoidingView', :path => '../'
@@ -19,4 +23,14 @@ target 'KeyboardAvoidingView_Example' do
         pod 'FBSnapshotTestCase'
         pod 'Nimble-Snapshots'
     end
+end
+
+
+post_install do |installer|
+    # Carthage support.
+    # It puts `KeyboardAvoidingView.swift` into public headers so @IBInspectable won't be stripped out.
+    additionHeader = installer.pods_project.development_pods['KeyboardAvoidingView/KeyboardAvoidingView.swift']
+    headersBuildPhase = installer.pods_project.targets.select{ |x| x.name == 'KeyboardAvoidingView' }[0].headers_build_phase
+    buildFile = headersBuildPhase.add_file_reference(additionHeader)
+    buildFile.settings = { 'ATTRIBUTES' => ['Public']}
 end
