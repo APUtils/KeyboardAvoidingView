@@ -21,7 +21,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 **If you are setting `KeyboardAvoidingView` class in storyboard assure module field is also `KeyboardAvoidingView`**
 
-<img src="Example/APButton/KeyboardAvoidingClassSelect.png"/>
+<img src="Example/KeyboardAvoidingView/Images/customClass.png"/>
 
 Please check [official guide](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
 
@@ -44,7 +44,7 @@ pod "KeyboardAvoidingView"
 
 Just set `KeyboardAvoidingView` class to any view in storyboard (usually it's base container) that you want to adjust it's bottom constraint or frame height to avoid keyboard, **assure module field is also `KeyboardAvoidingView`**. 
 
-<img src="Example/KeyboardAvoidingView/Images/KeyboardAvoidingClassSelect.png"/>
+<img src="Example/KeyboardAvoidingView/Images/customClass.png"/>
 
 It's also possible to create it from code:
 ```swift
