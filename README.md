@@ -1,9 +1,10 @@
 # KeyboardAvoidingView
 
-[![CI Status](http://img.shields.io/travis/APUtils/KeyboardAvoidingView.svg?style=flat)](https://travis-ci.org/APUtils/KeyboardAvoidingView)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/KeyboardAvoidingView.svg?style=flat)](http://cocoapods.org/pods/KeyboardAvoidingView)
 [![License](https://img.shields.io/cocoapods/l/KeyboardAvoidingView.svg?style=flat)](http://cocoapods.org/pods/KeyboardAvoidingView)
 [![Platform](https://img.shields.io/cocoapods/p/KeyboardAvoidingView.svg?style=flat)](http://cocoapods.org/pods/KeyboardAvoidingView)
+[![CI Status](http://img.shields.io/travis/APUtils/KeyboardAvoidingView.svg?style=flat)](https://travis-ci.org/APUtils/KeyboardAvoidingView)
 
 Simple solution for keyboard avoiding. View that manages it's bottom constraint constant or frame height to avoid keyboard.
 
