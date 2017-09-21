@@ -20,6 +20,7 @@
 		B0A073AC1F3A58A1001B8CC6 /* customClass.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A073AB1F3A58A1001B8CC6 /* customClass.png */; };
 		B0A073AF1F3A590C001B8CC6 /* podCheck.command in Resources */ = {isa = PBXBuildFile; fileRef = B0A073AD1F3A590C001B8CC6 /* podCheck.command */; };
 		B0A073B01F3A590C001B8CC6 /* podPush.command in Resources */ = {isa = PBXBuildFile; fileRef = B0A073AE1F3A590C001B8CC6 /* podPush.command */; };
+		B0C4CCC81F7457B000B4F810 /* podInstall.command in Resources */ = {isa = PBXBuildFile; fileRef = B0C4CCC71F7457B000B4F810 /* podInstall.command */; };
 		B0FBD92C1F0D5FA700848ADE /* UIView+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */; };
 		B0FBD92E1F0D5FC000848ADE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92D1F0D5FC000848ADE /* TextField.swift */; };
 		B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		B0A073AB1F3A58A1001B8CC6 /* customClass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customClass.png; sourceTree = "<group>"; };
 		B0A073AD1F3A590C001B8CC6 /* podCheck.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
 		B0A073AE1F3A590C001B8CC6 /* podPush.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = podPush.command; path = ../podPush.command; sourceTree = "<group>"; };
+		B0C4CCC71F7457B000B4F810 /* podInstall.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podInstall.command; sourceTree = "<group>"; };
 		B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Storyboard.swift"; sourceTree = "<group>"; };
 		B0FBD92D1F0D5FC000848ADE /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BC527DE7A0DE9DB49F3E0778 /* Pods-KeyboardAvoidingView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */,
 				44D0F72030B1EC613BED2B9C /* LICENSE */,
 				B0A073AD1F3A590C001B8CC6 /* podCheck.command */,
+				B0C4CCC71F7457B000B4F810 /* podInstall.command */,
 				B0A073AE1F3A590C001B8CC6 /* podPush.command */,
 				48DF8B513F1AE6906B8FADC1 /* README.md */,
 			);
@@ -262,16 +265,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -305,6 +308,7 @@
 				B06687D11F13AFCE00A02878 /* .travis.yml in Resources */,
 				B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				B0C4CCC81F7457B000B4F810 /* podInstall.command in Resources */,
 				B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */,
 				B0A073AC1F3A58A1001B8CC6 /* customClass.png in Resources */,
 				B0A073AF1F3A590C001B8CC6 /* podCheck.command in Resources */,
@@ -490,14 +494,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -537,14 +547,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -581,7 +597,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -597,7 +614,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -615,7 +633,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyboardAvoidingView_Example.app/KeyboardAvoidingView_Example";
 			};
 			name = Debug;
@@ -630,7 +649,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyboardAvoidingView_Example.app/KeyboardAvoidingView_Example";
 			};
 			name = Release;

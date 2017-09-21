@@ -23,6 +23,8 @@ private extension UIView {
 // MARK: - Class Implementation
 //-----------------------------------------------------------------------------
 
+// TODO: Add UIViewController viewState processing and react accordingly.
+
 /// Configures bottom constraint constant or frame height to avoid keyboard.
 /// Bottom constraint should be added to Layout Guide or superview bottom.
 public class KeyboardAvoidingView: UIView {
@@ -32,12 +34,13 @@ public class KeyboardAvoidingView: UIView {
     //-----------------------------------------------------------------------------
     
     /// Disable/enable resize back when keyboard dismiss. Might be helpful for some animations.
+    /// Default is `true` - default constant will be restored.
     @IBInspectable public var restoreDefaultConstant: Bool = true
     
-    /// Disable/enable animations. Could be used in case view isn't appeared yet to prevent broken animations for example.
+    /// Disable/enable animations. Default is `true` - animations enabled.
     public var animate = true
     
-    /// Disable reaction to keyboard notifications.
+    /// Disable reaction to keyboard notifications. Default is `false` - view is reacting to keyobard notifications.
     public var disable = false
     
     //-----------------------------------------------------------------------------
@@ -128,6 +131,9 @@ public class KeyboardAvoidingView: UIView {
     //-----------------------------------------------------------------------------
     // MARK: - Private Methods - Notifications
     //-----------------------------------------------------------------------------
+    
+    // TODO: Add keyboard hide notification because on iPads keyboard can be undocked and moved
+    // https://developer.apple.com/videos/play/wwdc2017/242/
     
     @objc private func keyboardWillChangeFrameNotification(_ notification: Notification) {
         configure()
