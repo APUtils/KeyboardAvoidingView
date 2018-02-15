@@ -97,6 +97,21 @@ public class KeyboardAvoidingView: UIView {
                 layoutGuideHeight = layoutGuide.length
             } else if let layoutGuide = bottomConstraint?.secondItem as? UILayoutSupport {
                 layoutGuideHeight = layoutGuide.length
+            } else {
+                // Safe area support
+                if #available(iOS 9.0, *) {
+                    let getLayoutHeight: (UILayoutGuide) -> (CGFloat?) = { layoutGuide in
+                        guard let owningView = layoutGuide.owningView, let window = owningView.window else { return nil }
+                        let rootRect = window.convert(layoutGuide.layoutFrame, from: owningView)
+                        return window.bounds.height - rootRect.maxY
+                    }
+                    
+                    if let layoutGuide = bottomConstraint?.firstItem as? UILayoutGuide {
+                        layoutGuideHeight = getLayoutHeight(layoutGuide)
+                    } else if let layoutGuide = bottomConstraint?.secondItem as? UILayoutGuide {
+                        layoutGuideHeight = getLayoutHeight(layoutGuide)
+                    }
+                }
             }
         } else if defaultHeight == nil {
             defaultHeight = frame.height

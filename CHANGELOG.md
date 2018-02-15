@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 `KeyboardAvoidingView` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.1.2](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.1.2)
+Released on 2018-02-15.
+
+#### Fixed
+- Safe area size detection fix.
+
+
 ## [2.1.0](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.1.0)
 Released on 2018-02-15.
 
