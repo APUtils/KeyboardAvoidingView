@@ -8,4 +8,13 @@
 
 import UIKit
 
-public class ViewController: UIViewController {}
+import APExtensions
+
+
+public class ViewController: UIViewController {
+    public override func becomeFirstResponder() -> Bool {
+        
+        
+        return false
+    }
+}

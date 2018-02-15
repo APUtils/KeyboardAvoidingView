@@ -11,7 +11,7 @@ import UIKit
 
 extension UIView {
     /// Returns closest UIViewController from responders chain.
-    var viewController: UIViewController? {
+    var _viewController: UIViewController? {
         var nextResponder: UIResponder? = self
         while nextResponder != nil {
             nextResponder = nextResponder?.next

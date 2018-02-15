@@ -23,6 +23,7 @@ private extension UIView {
 // MARK: - Class Implementation
 //-----------------------------------------------------------------------------
 
+// TODO: Allow bottom constraint to point to other views
 // TODO: Add UIViewController viewState processing and react accordingly.
 
 /// Configures bottom constraint constant or frame height to avoid keyboard.
@@ -148,7 +149,7 @@ public class KeyboardAvoidingView: UIView {
         let animationCurve: UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
         let options: UIViewAnimationOptions = [animationCurve, .beginFromCurrentState]
         
-        let updateFrameClosure: () -> () = {
+        let updateFrameClosure: () -> Void = {
             if self.isConstraintsAligned, let defaultConstant = self.defaultConstant, let bottomConstraint = self.bottomConstraint, let isInverseOrder = self.isInverseOrder, let superview = self.superview {
                 // Setup with bottom constraint constant
                 let superviewRoot = superview.rootView
@@ -174,16 +175,15 @@ public class KeyboardAvoidingView: UIView {
             }
         }
         
-        if animate {
-            superview?.layoutIfNeeded()
+        if animate && window != nil {
+            let vcView = _viewController?.view
+            vcView?.layoutIfNeeded()
             UIView.animate(withDuration: duration, delay: 0, options: options, animations: {
-                guard let superviewRoot = self.superview?.rootView else { return }
-                
                 updateFrameClosure()
-                superviewRoot.layoutIfNeeded()
+                vcView?.layoutIfNeeded()
             }, completion: nil)
         } else {
-            _ = updateFrameClosure()
+            updateFrameClosure()
         }
     }
     
@@ -210,6 +210,21 @@ public class KeyboardAvoidingView: UIView {
                     // Constraint from layout guide to view. Check if it is bottom constraint.
                     if constraint.secondAttribute == .bottom {
                         return constraint
+                    }
+                } else {
+                    // Safe area support
+                    if #available(iOS 9.0, *) {
+                        if constraint.firstItem === self && constraint.secondItem is UILayoutGuide {
+                            // Constraint from view to safe area. Check if it is bottom constraint.
+                            if constraint.firstAttribute == .bottom {
+                                return constraint
+                            }
+                        } else if constraint.secondItem === self && constraint.firstItem is UILayoutGuide {
+                            // Constraint from safe area to view. Check if it is bottom constraint.
+                            if constraint.secondAttribute == .bottom {
+                                return constraint
+                            }
+                        }
                     }
                 }
             }

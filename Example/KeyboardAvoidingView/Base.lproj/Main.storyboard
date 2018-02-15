@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n8h-Cm-n5N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n8h-Cm-n5N">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,10 +33,6 @@
         <scene sceneID="yRz-nZ-dN7">
             <objects>
                 <viewController id="KYG-h7-R0t" customClass="ViewController" customModule="KeyboardAvoidingView_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lRq-ps-w3w"/>
-                        <viewControllerLayoutGuide type="bottom" id="l7o-Te-1zs"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qr5-LH-Dtk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,11 +99,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="EJB-pU-Ulw" secondAttribute="trailing" id="EhB-ec-2aC"/>
-                            <constraint firstItem="EJB-pU-Ulw" firstAttribute="leading" secondItem="Qr5-LH-Dtk" secondAttribute="leading" id="J4v-7z-yfT"/>
-                            <constraint firstItem="l7o-Te-1zs" firstAttribute="top" secondItem="EJB-pU-Ulw" secondAttribute="bottom" id="iJn-J1-DFz"/>
+                            <constraint firstItem="gYk-ar-0N6" firstAttribute="trailing" secondItem="EJB-pU-Ulw" secondAttribute="trailing" id="EhB-ec-2aC"/>
+                            <constraint firstItem="EJB-pU-Ulw" firstAttribute="leading" secondItem="gYk-ar-0N6" secondAttribute="leading" id="J4v-7z-yfT"/>
+                            <constraint firstItem="gYk-ar-0N6" firstAttribute="bottom" secondItem="EJB-pU-Ulw" secondAttribute="bottom" id="iJn-J1-DFz"/>
                             <constraint firstItem="EJB-pU-Ulw" firstAttribute="top" secondItem="Qr5-LH-Dtk" secondAttribute="top" id="pPZ-oc-CzD"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="gYk-ar-0N6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Layout Guide" id="hvc-7H-aef"/>
                 </viewController>
@@ -120,7 +118,7 @@
                 <navigationController id="hmu-LW-ZZj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Superview Constraint" id="f61-E3-N9a"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8QM-Xr-6HH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -135,10 +133,6 @@
         <scene sceneID="Foi-FT-BlP">
             <objects>
                 <viewController id="xtX-PK-oMG" customClass="ViewController" customModule="KeyboardAvoidingView_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="e54-7F-J57"/>
-                        <viewControllerLayoutGuide type="bottom" id="mmP-cX-MK8"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Oaq-Oc-F75">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,11 +211,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="UNE-MX-Zhh" secondAttribute="bottom" id="98Z-gq-irM"/>
-                            <constraint firstAttribute="trailing" secondItem="UNE-MX-Zhh" secondAttribute="trailing" id="I7b-x7-HSb"/>
+                            <constraint firstItem="iqS-rg-tOZ" firstAttribute="trailing" secondItem="UNE-MX-Zhh" secondAttribute="trailing" id="I7b-x7-HSb"/>
                             <constraint firstItem="UNE-MX-Zhh" firstAttribute="top" secondItem="Oaq-Oc-F75" secondAttribute="top" id="a9I-dE-Itc"/>
                             <constraint firstAttribute="bottom" secondItem="nj8-RR-ILR" secondAttribute="bottom" constant="49" id="eQb-H6-bhh"/>
-                            <constraint firstItem="UNE-MX-Zhh" firstAttribute="leading" secondItem="Oaq-Oc-F75" secondAttribute="leading" id="yPJ-Dl-M7W"/>
+                            <constraint firstItem="UNE-MX-Zhh" firstAttribute="leading" secondItem="iqS-rg-tOZ" secondAttribute="leading" id="yPJ-Dl-M7W"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="iqS-rg-tOZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="7H6-67-f2j"/>
                     <navigationItem key="navigationItem" id="Cku-2A-W3Q"/>
@@ -234,10 +229,6 @@
         <scene sceneID="EfB-cF-eFG">
             <objects>
                 <viewController id="a7Z-nw-oha" customClass="ViewController" customModule="KeyboardAvoidingView_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3DZ-hr-upa"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ghk-lN-pKN"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Nb8-qN-PwG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,6 +275,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="j72-01-B79"/>
                     </view>
                     <navigationItem key="navigationItem" id="EhG-Gz-oaE"/>
                 </viewController>
@@ -297,7 +289,7 @@
                 <navigationController id="b6Q-4D-jkt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Frame" id="iAZ-fv-ntp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1hI-7l-9zv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
