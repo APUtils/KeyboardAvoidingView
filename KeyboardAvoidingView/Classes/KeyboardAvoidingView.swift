@@ -48,6 +48,7 @@ public class KeyboardAvoidingView: UIView {
     // MARK: - Private properties
     //-----------------------------------------------------------------------------
     
+    private var isFirstTime = true
     private var bottomConstraint: NSLayoutConstraint?
     private var defaultConstant: CGFloat?
     private var layoutGuideHeight: CGFloat?
@@ -76,6 +77,10 @@ public class KeyboardAvoidingView: UIView {
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
         
         setup()
     }
@@ -88,8 +93,25 @@ public class KeyboardAvoidingView: UIView {
         NotificationCenter.default.addObserver(self, selector: #selector(KeyboardAvoidingView.keyboardWillChangeFrameNotification(_:)), name: .UIKeyboardWillChangeFrame, object: nil)
     }
     
-    private func configure() {
-        if bottomConstraint == nil, let newBottomConstraint = getBottomConstraint() {
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        getDefaultValues()
+        
+        if isFirstTime {
+            isFirstTime = false
+            
+            // Keyboard already on screen. Configure view for that.
+            if _g_visibleKeyboardHeight > 0 {
+                configureFrame(keyboardHeight: _g_visibleKeyboardHeight)
+            }
+        }
+    }
+    
+    private func getDefaultValues() {
+        guard bottomConstraint == nil && defaultHeight == nil else { return }
+        
+        if let newBottomConstraint = getBottomConstraint() {
             bottomConstraint = newBottomConstraint
             defaultConstant = newBottomConstraint.constant
             
@@ -115,6 +137,39 @@ public class KeyboardAvoidingView: UIView {
             }
         } else if defaultHeight == nil {
             defaultHeight = frame.height
+        }
+    }
+    
+    private func configureFrame(keyboardHeight: CGFloat) {
+        let screenSize = UIScreen.main.bounds.size
+        let keyboardFrame = CGRect(x: 0, y: screenSize.height - keyboardHeight, width: screenSize.width, height: keyboardHeight)
+        
+        configureFrame(keyboardFrame: keyboardFrame)
+    }
+    
+    private func configureFrame(keyboardFrame: CGRect) {
+        if self.isConstraintsAligned, let defaultConstant = self.defaultConstant, let bottomConstraint = self.bottomConstraint, let isInverseOrder = self.isInverseOrder, let superview = self.superview {
+            // Setup with bottom constraint constant
+            let superviewRoot = superview.rootView
+            let superviewFrameInRoot = superview.convert(superview.bounds, to: superviewRoot)
+            let keyboardOverlapSuperviewHeight = superviewFrameInRoot.maxY - keyboardFrame.minY - (self.layoutGuideHeight ?? 0)
+            var newConstant = max(keyboardOverlapSuperviewHeight, defaultConstant)
+            if !self.restoreDefaultConstant {
+                newConstant = max(bottomConstraint.constant, newConstant)
+            }
+            
+            // Preventing modal view disappear crashes.
+            // Assuming we'll never need to set bottom constraint constant more than keyboard height.
+            newConstant = min(newConstant, keyboardFrame.height)
+            
+            bottomConstraint.constant = isInverseOrder ? -newConstant : newConstant
+        } else if let defaultHeight = self.defaultHeight {
+            // Setup with frame height
+            let frameInRoot = self.convert(self.bounds, to: self.rootView)
+            let visibleHeight = keyboardFrame.minY - frameInRoot.minY
+            let newHeight = min(visibleHeight, defaultHeight)
+            
+            self.frame.size.height = newHeight
         }
     }
     
@@ -152,7 +207,7 @@ public class KeyboardAvoidingView: UIView {
     // https://developer.apple.com/videos/play/wwdc2017/242/
     
     @objc private func keyboardWillChangeFrameNotification(_ notification: Notification) {
-        configure()
+        getDefaultValues()
         
         guard !disable, let userInfo = notification.userInfo, let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue, endFrame != previousKeyboardFrame else { return }
         
@@ -164,41 +219,16 @@ public class KeyboardAvoidingView: UIView {
         let animationCurve: UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
         let options: UIViewAnimationOptions = [animationCurve, .beginFromCurrentState]
         
-        let updateFrameClosure: () -> Void = {
-            if self.isConstraintsAligned, let defaultConstant = self.defaultConstant, let bottomConstraint = self.bottomConstraint, let isInverseOrder = self.isInverseOrder, let superview = self.superview {
-                // Setup with bottom constraint constant
-                let superviewRoot = superview.rootView
-                let superviewFrameInRoot = superview.convert(superview.bounds, to: superviewRoot)
-                let keyboardOverlapSuperviewHeight = superviewFrameInRoot.maxY - endFrame.minY - (self.layoutGuideHeight ?? 0)
-                var newConstant = max(keyboardOverlapSuperviewHeight, defaultConstant)
-                if !self.restoreDefaultConstant {
-                    newConstant = max(bottomConstraint.constant, newConstant)
-                }
-                
-                // Preventing modal view disappear crashes.
-                // Assuming we'll never need to set bottom constraint constant more than keyboard height.
-                newConstant = min(newConstant, endFrame.height)
-                
-                bottomConstraint.constant = isInverseOrder ? -newConstant : newConstant
-            } else if let defaultHeight = self.defaultHeight {
-                // Setup with frame height
-                let frameInRoot = self.convert(self.bounds, to: self.rootView)
-                let visibleHeight = endFrame.minY - frameInRoot.minY
-                let newHeight = min(visibleHeight, defaultHeight)
-                
-                self.frame.size.height = newHeight
-            }
-        }
         
         if animate && window != nil {
             let vcView = _viewController?.view
             vcView?.layoutIfNeeded()
             UIView.animate(withDuration: duration, delay: 0, options: options, animations: {
-                updateFrameClosure()
+                self.configureFrame(keyboardFrame: endFrame)
                 vcView?.layoutIfNeeded()
             }, completion: nil)
         } else {
-            updateFrameClosure()
+            configureFrame(keyboardFrame: endFrame)
         }
     }
     
