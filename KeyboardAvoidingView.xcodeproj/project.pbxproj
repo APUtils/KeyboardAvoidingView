@@ -11,6 +11,7 @@
 		B024CF612035F6660008EC7B /* KeyboardAvoidingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */; };
 		B024CF622035F6660008EC7B /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF602035F6660008EC7B /* UIView+Utils.swift */; };
 		B024CF632035F6700008EC7B /* KeyboardAvoidingView.swift in Headers */ = {isa = PBXBuildFile; fileRef = B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		B024CF74203628230008EC7B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF73203628220008EC7B /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B024CF582035F4DD0008EC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAvoidingView.swift; path = Classes/KeyboardAvoidingView.swift; sourceTree = "<group>"; };
 		B024CF602035F6660008EC7B /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Classes/UIView+Utils.swift"; sourceTree = "<group>"; };
+		B024CF73203628220008EC7B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Classes/Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				B024CF572035F4DD0008EC7B /* KeyboardAvoidingView.h */,
 				B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */,
 				B024CF602035F6660008EC7B /* UIView+Utils.swift */,
+				B024CF73203628220008EC7B /* Utils.swift */,
 			);
 			path = KeyboardAvoidingView;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				B024CF622035F6660008EC7B /* UIView+Utils.swift in Sources */,
 				B024CF612035F6660008EC7B /* KeyboardAvoidingView.swift in Sources */,
+				B024CF74203628230008EC7B /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
