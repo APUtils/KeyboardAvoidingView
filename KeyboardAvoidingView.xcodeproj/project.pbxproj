@@ -11,7 +11,10 @@
 		B024CF612035F6660008EC7B /* KeyboardAvoidingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */; };
 		B024CF622035F6660008EC7B /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF602035F6660008EC7B /* UIView+Utils.swift */; };
 		B024CF632035F6700008EC7B /* KeyboardAvoidingView.swift in Headers */ = {isa = PBXBuildFile; fileRef = B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		B024CF74203628230008EC7B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF73203628220008EC7B /* Utils.swift */; };
+		B03A625920383F290002DC9F /* APExtensionsViewState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03A625820383F290002DC9F /* APExtensionsViewState.framework */; };
+		B0F82F7020375930004FC037 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F82F6D20375930004FC037 /* KeyboardManager.swift */; };
+		B0F82F7120375930004FC037 /* KeyboardAvoidingViewLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = B0F82F6E20375930004FC037 /* KeyboardAvoidingViewLoader.h */; };
+		B0F82F7220375930004FC037 /* KeyboardAvoidingViewLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F82F6F20375930004FC037 /* KeyboardAvoidingViewLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +23,10 @@
 		B024CF582035F4DD0008EC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAvoidingView.swift; path = Classes/KeyboardAvoidingView.swift; sourceTree = "<group>"; };
 		B024CF602035F6660008EC7B /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Classes/UIView+Utils.swift"; sourceTree = "<group>"; };
-		B024CF73203628220008EC7B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Classes/Utils.swift; sourceTree = "<group>"; };
+		B03A625820383F290002DC9F /* APExtensionsViewState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APExtensionsViewState.framework; path = Carthage/Build/iOS/APExtensionsViewState.framework; sourceTree = "<group>"; };
+		B0F82F6D20375930004FC037 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardManager.swift; path = Classes/KeyboardManager.swift; sourceTree = "<group>"; };
+		B0F82F6E20375930004FC037 /* KeyboardAvoidingViewLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardAvoidingViewLoader.h; path = Classes/KeyboardAvoidingViewLoader.h; sourceTree = "<group>"; };
+		B0F82F6F20375930004FC037 /* KeyboardAvoidingViewLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyboardAvoidingViewLoader.m; path = Classes/KeyboardAvoidingViewLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03A625920383F290002DC9F /* APExtensionsViewState.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +46,7 @@
 			children = (
 				B024CF562035F4DD0008EC7B /* KeyboardAvoidingView */,
 				B024CF552035F4DD0008EC7B /* Products */,
+				B03A625720383F290002DC9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +64,20 @@
 				B024CF582035F4DD0008EC7B /* Info.plist */,
 				B024CF572035F4DD0008EC7B /* KeyboardAvoidingView.h */,
 				B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */,
+				B0F82F6E20375930004FC037 /* KeyboardAvoidingViewLoader.h */,
+				B0F82F6F20375930004FC037 /* KeyboardAvoidingViewLoader.m */,
+				B0F82F6D20375930004FC037 /* KeyboardManager.swift */,
 				B024CF602035F6660008EC7B /* UIView+Utils.swift */,
-				B024CF73203628220008EC7B /* Utils.swift */,
 			);
 			path = KeyboardAvoidingView;
+			sourceTree = "<group>";
+		};
+		B03A625720383F290002DC9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B03A625820383F290002DC9F /* APExtensionsViewState.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +89,7 @@
 			files = (
 				B024CF592035F4DD0008EC7B /* KeyboardAvoidingView.h in Headers */,
 				B024CF632035F6700008EC7B /* KeyboardAvoidingView.swift in Headers */,
+				B0F82F7120375930004FC037 /* KeyboardAvoidingViewLoader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +164,8 @@
 			files = (
 				B024CF622035F6660008EC7B /* UIView+Utils.swift in Sources */,
 				B024CF612035F6660008EC7B /* KeyboardAvoidingView.swift in Sources */,
-				B024CF74203628230008EC7B /* Utils.swift in Sources */,
+				B0F82F7020375930004FC037 /* KeyboardManager.swift in Sources */,
+				B0F82F7220375930004FC037 /* KeyboardAvoidingViewLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +296,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"CARTHAGE=1",
+				);
 				INFOPLIST_FILE = KeyboardAvoidingView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -283,6 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG CARTHAGE";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,6 +330,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = "CARTHAGE=1";
 				INFOPLIST_FILE = KeyboardAvoidingView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -307,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = CARTHAGE;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

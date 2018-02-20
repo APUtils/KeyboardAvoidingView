@@ -15,17 +15,18 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - KeyboardAvoidingView (2.0.0)
-  - Nimble (7.0.1)
-  - Nimble-Snapshots (6.0.0):
-    - Nimble-Snapshots/Core (= 6.0.0)
-  - Nimble-Snapshots/Core (6.0.0):
+  - KeyboardAvoidingView (2.2.0):
+    - APExtensions/ViewState
+  - Nimble (7.0.3)
+  - Nimble-Snapshots (6.3.0):
+    - Nimble-Snapshots/Core (= 6.3.0)
+  - Nimble-Snapshots/Core (6.3.0):
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
-  - Quick (1.1.0)
+  - Quick (1.2.0)
 
 DEPENDENCIES:
-  - APExtensions
+  - APExtensions (from `https://github.com/APUtils/APExtensions`)
   - FBSnapshotTestCase
   - KeyboardAvoidingView (from `../`)
   - Nimble
@@ -33,17 +34,24 @@ DEPENDENCIES:
   - Quick
 
 EXTERNAL SOURCES:
+  APExtensions:
+    :git: https://github.com/APUtils/APExtensions
   KeyboardAvoidingView:
     :path: ../
+
+CHECKOUT OPTIONS:
+  APExtensions:
+    :commit: 0c62fc9f38509b55be7464089f8e588ed62db673
+    :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
   APExtensions: fe31373aa792e3c2d2bf3e7043132445497535f8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  KeyboardAvoidingView: b75d8b64dcaeb06419fad50651685b0840567f6d
-  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
-  Nimble-Snapshots: 760c29e4ea1297560953c13421553d1a8d6bbdf6
-  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  KeyboardAvoidingView: 8b1691182188183ab417bf581ce3283a8bc8e84e
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 3d2c5450286919c2f800d46a89d78cb39317d9c5
+PODFILE CHECKSUM: d434a4a95decfc8149cbb7a3310ae37890f2ba43
 
 COCOAPODS: 1.4.0

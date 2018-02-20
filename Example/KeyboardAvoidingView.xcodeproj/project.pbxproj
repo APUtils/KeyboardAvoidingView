@@ -17,7 +17,6 @@
 		B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CC1F13AFCE00A02878 /* .cocoadocs.yml */; };
 		B06687D01F13AFCE00A02878 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B06687CD1F13AFCE00A02878 /* .gitignore */; };
 		B06687D11F13AFCE00A02878 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CE1F13AFCE00A02878 /* .travis.yml */; };
-		B0A073AC1F3A58A1001B8CC6 /* customClass.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A073AB1F3A58A1001B8CC6 /* customClass.png */; };
 		B0A073AF1F3A590C001B8CC6 /* podCheck.command in Resources */ = {isa = PBXBuildFile; fileRef = B0A073AD1F3A590C001B8CC6 /* podCheck.command */; };
 		B0A073B01F3A590C001B8CC6 /* podPush.command in Resources */ = {isa = PBXBuildFile; fileRef = B0A073AE1F3A590C001B8CC6 /* podPush.command */; };
 		B0C4CCC81F7457B000B4F810 /* podInstall.command in Resources */ = {isa = PBXBuildFile; fileRef = B0C4CCC71F7457B000B4F810 /* podInstall.command */; };
@@ -37,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KeyboardAvoidingView.podspec; path = ../KeyboardAvoidingView.podspec; sourceTree = "<group>"; };
+		103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KeyboardAvoidingView.podspec; path = ../KeyboardAvoidingView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		18C65CCE2C5294AAC77045E7 /* Pods-KeyboardAvoidingView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1BE417170326D19047AE8C2A /* Pods_KeyboardAvoidingView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAvoidingView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D244CF39B47C0D695EE88B /* Pods-KeyboardAvoidingView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		B0A073AD1F3A590C001B8CC6 /* podCheck.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
 		B0A073AE1F3A590C001B8CC6 /* podPush.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = podPush.command; path = ../podPush.command; sourceTree = "<group>"; };
 		B0C4CCC71F7457B000B4F810 /* podInstall.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podInstall.command; sourceTree = "<group>"; };
+		B0E9E2C12038473800C83B85 /* APExtensionsViewState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APExtensionsViewState.framework; path = ../Carthage/Build/iOS/APExtensionsViewState.framework; sourceTree = "<group>"; };
 		B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Storyboard.swift"; sourceTree = "<group>"; };
 		B0FBD92D1F0D5FC000848ADE /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		BC527DE7A0DE9DB49F3E0778 /* Pods-KeyboardAvoidingView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +203,7 @@
 		ECEB14EC41DB5DC5D0F94F67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0E9E2C12038473800C83B85 /* APExtensionsViewState.framework */,
 				1BE417170326D19047AE8C2A /* Pods_KeyboardAvoidingView_Example.framework */,
 				391C6CF853A7507879875666 /* Pods_KeyboardAvoidingView_Tests.framework */,
 				74D362DCD56DAE51046FED1C /* Pods_KeyboardAvoidingView_UITests.framework */,
@@ -306,7 +307,6 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				B0C4CCC81F7457B000B4F810 /* podInstall.command in Resources */,
 				B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */,
-				B0A073AC1F3A58A1001B8CC6 /* customClass.png in Resources */,
 				B0A073AF1F3A590C001B8CC6 /* podCheck.command in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);

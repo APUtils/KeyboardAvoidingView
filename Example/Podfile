@@ -15,7 +15,7 @@ install! 'cocoapods',
 target 'KeyboardAvoidingView_Example' do
     pod 'KeyboardAvoidingView', :path => '../'
     
-    pod 'APExtensions'
+    pod 'APExtensions', :git => 'https://github.com/APUtils/APExtensions'
 
     target 'KeyboardAvoidingView_Tests' do
         inherit! :search_paths
@@ -40,11 +40,4 @@ post_install do |installer|
             end
         end
     end
-    
-    # Carthage support.
-    # It puts `KeyboardAvoidingView.swift` into public headers so @IBInspectable won't be stripped out.
-    additionHeader = installer.pods_project.development_pods['KeyboardAvoidingView/KeyboardAvoidingView.swift']
-    headersBuildPhase = installer.pods_project.targets.select{ |x| x.name == 'KeyboardAvoidingView' }[0].headers_build_phase
-    buildFile = headersBuildPhase.add_file_reference(additionHeader)
-    buildFile.settings = { 'ATTRIBUTES' => ['Public']}
 end

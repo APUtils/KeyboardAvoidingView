@@ -11,10 +11,42 @@ import UIKit
 import APExtensions
 
 
+private var c_vcCounter = 0
+
+
 public class ViewController: UIViewController {
-    public override func becomeFirstResponder() -> Bool {
+    
+    // ******************************* MARK: - @IBOutlets
+    
+    @IBOutlet private weak var textField: UITextField?
+    
+    // ******************************* MARK: - Private Properties
+    
+    private lazy var vcNumber: Int = {
+        c_vcCounter += 1
+        return c_vcCounter
+    }()
+    
+    // ******************************* MARK: - UIViewController Overrides
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
         
-        
-        return false
     }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
+//    public override func becomeFirstResponder() -> Bool {
+//        if viewState == .willAppear {
+//            print("\(vcNumber) - becomeFirstResponder")
+////            view.layoutIfNeeded()
+//            textField?.becomeFirstResponder()
+//            return false
+//        }
+//
+//        return super.becomeFirstResponder()
+//    }
 }

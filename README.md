@@ -29,8 +29,10 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/KeyboardAvoidingView"
+github "APUtils/KeyboardAvoidingView" ~> 2.2
 ```
+
+Add `KeyboardAvoidingView.framework` and `APExtensionsViewState.framework` frameworks to your project.
 
 #### CocoaPods
 
@@ -38,7 +40,7 @@ KeyboardAvoidingView is available through [CocoaPods](http://cocoapods.org). To 
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "KeyboardAvoidingView"
+pod "KeyboardAvoidingView", '~> 2.2'
 ```
 
 ## Usage

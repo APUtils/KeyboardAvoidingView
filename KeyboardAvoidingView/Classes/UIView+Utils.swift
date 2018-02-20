@@ -10,10 +10,6 @@ import UIKit
 
 
 extension UIView {
-    var _rootView: UIView {
-        return superview?._rootView ?? self
-    }
-    
     var _superviews: AnySequence<UIView> {
         return sequence(first: self, next: { $0.superview }).dropFirst(1)
     }

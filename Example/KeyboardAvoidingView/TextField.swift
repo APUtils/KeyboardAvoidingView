@@ -12,9 +12,7 @@ import UIKit
 /// TextField with `Done` default button and close keyboard when tap
 class TextField: UITextField {
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Initialization
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Initialization
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -22,9 +20,7 @@ class TextField: UITextField {
         setup()
     }
     
-    //-----------------------------------------------------------------------------
-    // MARK: - Private methods
-    //-----------------------------------------------------------------------------
+    // ******************************* MARK: - Private methods
     
     private func setup() {
         returnKeyType = .done
@@ -32,9 +28,7 @@ class TextField: UITextField {
     }
 }
 
-//-----------------------------------------------------------------------------
-// MARK: - UITextFieldDelegate
-//-----------------------------------------------------------------------------
+// ******************************* MARK: - UITextFieldDelegate
 
 extension TextField: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

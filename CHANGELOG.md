@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file.
 `KeyboardAvoidingView` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.0](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.0)
+Released on 2018-02-20.
+
+#### Added
+- KeyboardManager
+- Dependency on APExtensions/ViewState
+- Better iOS push/pop/present/dismiss animations handling
+
+#### Fixed
+- Safe area fix.
+
+
 ## [2.1.3](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.1.3)
 Released on 2018-02-15.
 
