@@ -67,6 +67,7 @@
 		B0E9E2C12038473800C83B85 /* APExtensionsViewState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APExtensionsViewState.framework; path = ../Carthage/Build/iOS/APExtensionsViewState.framework; sourceTree = "<group>"; };
 		B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Storyboard.swift"; sourceTree = "<group>"; };
 		B0FBD92D1F0D5FC000848ADE /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		B0FD602620408473004C1D01 /* podUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podUpdate.command; sourceTree = "<group>"; };
 		BC527DE7A0DE9DB49F3E0778 /* Pods-KeyboardAvoidingView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +167,7 @@
 				B0A073AD1F3A590C001B8CC6 /* podCheck.command */,
 				B0C4CCC71F7457B000B4F810 /* podInstall.command */,
 				B0A073AE1F3A590C001B8CC6 /* podPush.command */,
+				B0FD602620408473004C1D01 /* podUpdate.command */,
 				48DF8B513F1AE6906B8FADC1 /* README.md */,
 			);
 			name = "Podspec Metadata";

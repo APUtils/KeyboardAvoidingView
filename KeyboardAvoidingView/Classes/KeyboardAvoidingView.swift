@@ -35,7 +35,6 @@ public class KeyboardAvoidingView: UIView {
     
     // ******************************* MARK: - Private properties
     
-    private var isFirstTime = true
     private var bottomConstraint: NSLayoutConstraint?
     private var defaultConstant: CGFloat?
     private var defaultHeight: CGFloat?
@@ -101,7 +100,7 @@ public class KeyboardAvoidingView: UIView {
     
     private func setupNotifications() {
         if let vc = _viewController {
-            NotificationCenter.default.addObserver(self, selector: #selector(onWillAppear(_:)), name: .UIViewControllerViewWillAppear, object: vc)
+            NotificationCenter.default.addObserver(self, selector: #selector(onViewStateDidChange(_:)), name: .UIViewControllerViewStateDidChange, object: vc)
         }
     }
     
@@ -153,17 +152,7 @@ public class KeyboardAvoidingView: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        getDefaultValues()
-        
-        if isFirstTime {
-            isFirstTime = false
-            
-            // Keyboard already on screen. Configure view for that.
-            let keyboardOverlappingFrame = KeyboardManager.shared.keyboardOverlappingFrame
-            if keyboardOverlappingFrame.height > 0 {
-                configureSize(keyboardOverlappingFrame: keyboardOverlappingFrame)
-            }
-        }
+        configureSize()
     }
     
     // Make keyboard avoiding view transparent for touches
@@ -176,8 +165,11 @@ public class KeyboardAvoidingView: UIView {
     
     // ******************************* MARK: - Private Methods - Notifications
     
-    @objc private func onWillAppear(_ notification: Notification) {
+    @objc private func onViewStateDidChange(_ notification: Notification) {
         // Assure view frame configured before appear
+        guard let viewState = notification.userInfo?["viewState"] as? UIViewController.ViewState else { return }
+        guard viewState == .didAttach || viewState == .willAppear else { return }
+        
         configureSize()
     }
     
@@ -247,13 +239,18 @@ extension KeyboardAvoidingView: KeyboardControllerListener {
     public func keyboard(willChangeOverlappingFrame frame: CGRect, duration: Double, animationOptions: UIViewAnimationOptions) {
         getDefaultValues()
         
-        // Do not animate if pushing/poping/presenting/dismissing. It's iOS default behaviour.
+        // View may be attached to window directly therefore allow frame adjust if there is no view controller.
+        // However, adjust if there is view controller for better animations.
         guard let viewController = _viewController else { return }
-        guard viewController.viewState == .didAppear || viewController.viewState == .willAppear else { return }
         
+        // Do not adjust for .notLoaded and .didLoad because will be adjusted in willAppear
+        // Do not adjust for .willDisappear and .didDisappear for better disappear animation
+        guard viewController.viewState == .didAppear || viewController.viewState == .willAppear || viewController.viewState == .didAttach else { return }
+        
+        // Animate only .didAppear state to prevent broken transitions.
         if animate && window != nil && viewController.viewState == .didAppear {
-            // Assure view layouted before animations start
-            let vcView = _viewController?.view
+            // Assure view layouted before animations start and we get default values
+            let vcView = viewController.view
             vcView?.layoutIfNeeded()
             
             UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: {
