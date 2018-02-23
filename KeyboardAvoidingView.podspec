@@ -38,5 +38,5 @@ Common usage: set `KeyboardAvoidingView` class to any view (usually it's base co
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation', 'UIKit'
-  s.dependency 'APExtensions/ViewState', >= '4.5.0'
+  s.dependency 'APExtensions/ViewState', '>= 4.5.0'
 end
