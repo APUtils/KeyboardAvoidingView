@@ -135,8 +135,9 @@ public class KeyboardAvoidingView: UIView {
             // Preventing modal view disappear constraint crashes.
             // Assuming we'll never need to set bottom constraint constant more than half of the screen height.
             newConstant = min(newConstant, UIScreen.main.bounds.height / 2)
+            newConstant = isInverseOrder ? -newConstant : newConstant
+            bottomConstraint.constant = newConstant
             
-            bottomConstraint.constant = isInverseOrder ? -newConstant : newConstant
         } else if let defaultHeight = self.defaultHeight {
             // Setup with frame height
             let frameInRoot = convert(bounds, to: UIScreen.main.coordinateSpace)
@@ -152,6 +153,7 @@ public class KeyboardAvoidingView: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
+        getDefaultValuesIfNeeded()
         configureSize()
     }
     
@@ -168,14 +170,14 @@ public class KeyboardAvoidingView: UIView {
     @objc private func onViewStateDidChange(_ notification: Notification) {
         // Assure view frame configured before appear
         guard let viewState = notification.userInfo?["viewState"] as? UIViewController.ViewState else { return }
-        guard viewState == .didAttach || viewState == .willAppear else { return }
+        guard viewState == .willAppear else { return }
         
         configureSize()
     }
     
     // ******************************* MARK: - Private Methods
     
-    private func getDefaultValues() {
+    private func getDefaultValuesIfNeeded() {
         guard bottomConstraint == nil && defaultHeight == nil else { return }
         
         if let newBottomConstraint = getBottomConstraint() {
@@ -237,7 +239,7 @@ extension KeyboardAvoidingView: KeyboardControllerListener {
     // https://developer.apple.com/videos/play/wwdc2017/242/
     
     public func keyboard(willChangeOverlappingFrame frame: CGRect, duration: Double, animationOptions: UIViewAnimationOptions) {
-        getDefaultValues()
+        getDefaultValuesIfNeeded()
         
         // View may be attached to window directly therefore allow frame adjust if there is no view controller.
         // However, adjust if there is view controller for better animations.

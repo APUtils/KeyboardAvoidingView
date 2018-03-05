@@ -39,6 +39,13 @@ public class KeyboardManager: NSObject {
     
     // ******************************* MARK: - Public Properties
     
+    /// Is keyboard shown?
+    public var isKeyboardShown: Bool {
+        let screenBounds = c_screenBounds
+        let intersection = screenBounds.intersection(keyboardFrame)
+        return !intersection.isNull
+    }
+    
     /// Current keyboard overlapping rect
     public var keyboardOverlappingFrame: CGRect {
         let screenBounds = c_screenBounds
@@ -104,7 +111,7 @@ public class KeyboardManager: NSObject {
         guard let userInfo = notification.userInfo else { return }
         guard let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
         guard keyboardEndFrame != keyboardFrame else { return }
-        if c_debugWork { NSLog("KeyboardManager: frame will change to \(keyboardEndFrame)") }
+        if c_debugWork { print("KeyboardManager: frame will change to \(keyboardEndFrame)") }
         
         let duration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
         let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber

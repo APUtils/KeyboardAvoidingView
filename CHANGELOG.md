@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file.
 `KeyboardAvoidingView` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.3](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.3)
+Released on 2018-03-05.
+
+#### Added
+- KeyboardManager .isKeyboardShown
+
+#### Fixed
+- Layout fix when keyboard already on screen
+
+
 ## [2.2.1](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.1)
 Released on 2018-02-23.
 

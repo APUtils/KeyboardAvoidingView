@@ -346,7 +346,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="becomeFirstResponderWhenPossible" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="becomeMainRespoder" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27E-wp-hhk" customClass="TextField" customModule="KeyboardAvoidingView_Example" customModuleProvider="target">
@@ -470,7 +470,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="becomeFirstResponderWhenPossible" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="becomeMainRespoder" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKi-tH-kfB" customClass="TextField" customModule="KeyboardAvoidingView_Example" customModuleProvider="target">

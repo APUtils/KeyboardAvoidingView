@@ -1,22 +1,22 @@
 PODS:
-  - APExtensions (4.4.2):
-    - APExtensions/Abstractions (= 4.4.2)
-    - APExtensions/Core (= 4.4.2)
-    - APExtensions/Storyboard (= 4.4.2)
-    - APExtensions/ViewConfiguration (= 4.4.2)
-    - APExtensions/ViewState (= 4.4.2)
-  - APExtensions/Abstractions (4.4.2)
-  - APExtensions/Core (4.4.2)
-  - APExtensions/Storyboard (4.4.2)
-  - APExtensions/ViewConfiguration (4.4.2)
-  - APExtensions/ViewState (4.4.2)
+  - APExtensions (4.5.0):
+    - APExtensions/Abstractions (= 4.5.0)
+    - APExtensions/Core (= 4.5.0)
+    - APExtensions/Storyboard (= 4.5.0)
+    - APExtensions/ViewConfiguration (= 4.5.0)
+    - APExtensions/ViewState (= 4.5.0)
+  - APExtensions/Abstractions (4.5.0)
+  - APExtensions/Core (4.5.0)
+  - APExtensions/Storyboard (4.5.0)
+  - APExtensions/ViewConfiguration (4.5.0)
+  - APExtensions/ViewState (4.5.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - KeyboardAvoidingView (2.2.0):
-    - APExtensions/ViewState
+  - KeyboardAvoidingView (2.2.2):
+    - APExtensions/ViewState (>= 4.5.0)
   - Nimble (7.0.3)
   - Nimble-Snapshots (6.3.0):
     - Nimble-Snapshots/Core (= 6.3.0)
@@ -41,13 +41,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: 88cde6b6862332f0694755ab8ecfccb6f989cd84
+    :commit: a010accd8d30be136822785fc1bc47467910375e
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
-  APExtensions: fe31373aa792e3c2d2bf3e7043132445497535f8
+  APExtensions: fb4a458bdd8230f9c2c0c95927397a634e179872
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  KeyboardAvoidingView: 8b1691182188183ab417bf581ce3283a8bc8e84e
+  KeyboardAvoidingView: 4cb4f1af1199f8eabd0663d921ba913b53bd62c1
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
