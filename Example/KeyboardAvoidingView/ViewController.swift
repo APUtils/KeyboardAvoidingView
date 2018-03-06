@@ -35,24 +35,18 @@ public class ViewController: UIViewController {
     }
     
     public override func viewWillAppear(_ animated: Bool) {
-//        textField?.becomeFirstResponderWhenPossible = true
-        
         super.viewWillAppear(animated)
+        
     }
     
     public override func viewDidAppear(_ animated: Bool) {
-        
         super.viewDidAppear(animated)
+        
     }
     
-//    public override func becomeFirstResponder() -> Bool {
-//        if viewState == .willAppear {
-//            print("\(vcNumber) - becomeFirstResponder")
-////            view.layoutIfNeeded()
-//            textField?.becomeFirstResponder()
-//            return false
-//        }
-//
-//        return super.becomeFirstResponder()
-//    }
+    public override func becomeFirstResponder() -> Bool {
+        let bool = super.becomeFirstResponder()
+        
+        return bool
+    }
 }

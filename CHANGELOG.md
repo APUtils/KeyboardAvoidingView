@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 `KeyboardAvoidingView` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.4](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.4)
+Released on 2018-03-06.
+
+#### Fixed
+- Prevent dismiss size change on layout
+
+
 ## [2.2.3](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.3)
 Released on 2018-03-05.
 

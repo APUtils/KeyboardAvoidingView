@@ -119,10 +119,34 @@ public class KeyboardAvoidingView: UIView {
     // ******************************* MARK: - Configuration
     
     private func configureSize() {
-        configureSize(keyboardOverlappingFrame: KeyboardManager.shared.keyboardOverlappingFrame)
+        configureSize(keyboardOverlappingFrame: KeyboardManager.shared.keyboardOverlappingFrame, duration: nil, animationOptions: nil)
     }
     
-    private func configureSize(keyboardOverlappingFrame: CGRect) {
+    private func configureSize(keyboardOverlappingFrame frame: CGRect, duration: Double?, animationOptions: UIViewAnimationOptions?) {
+        getDefaultValuesIfNeeded()
+        
+        // Support only views that has viewControllers for now
+        guard let viewController = _viewController else { return }
+        
+        // Do not adjust for .notLoaded and .didLoad because will be adjusted in willAppear
+        // Do not adjust for .willDisappear and .didDisappear for better disappear animation
+        guard viewController.viewState == .didAppear || viewController.viewState == .willAppear || viewController.viewState == .didAttach else { return }
+        
+        // Animate only .didAppear state to prevent broken transitions.
+        if animate && window != nil && viewController.viewState == .didAppear, let duration = duration, let animationOptions = animationOptions {
+            // Assure view layouted before animations start
+            let vcView = viewController.view
+            vcView?.layoutIfNeeded()
+            UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: {
+                self.updateSize(keyboardOverlappingFrame: frame)
+                vcView?.layoutIfNeeded()
+            }, completion: nil)
+        } else {
+            updateSize(keyboardOverlappingFrame: frame)
+        }
+    }
+    
+    private func updateSize(keyboardOverlappingFrame: CGRect) {
         if self.isConstraintsAligned, let defaultConstant = self.defaultConstant, let bottomConstraint = self.bottomConstraint, let isInverseOrder = self.isInverseOrder, let superview = self.superview {
             // Setup with bottom constraint constant
             let superviewFrameInRoot = superview.convert(superview.bounds, to: UIScreen.main.coordinateSpace)
@@ -153,7 +177,6 @@ public class KeyboardAvoidingView: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        getDefaultValuesIfNeeded()
         configureSize()
     }
     
@@ -239,28 +262,6 @@ extension KeyboardAvoidingView: KeyboardControllerListener {
     // https://developer.apple.com/videos/play/wwdc2017/242/
     
     public func keyboard(willChangeOverlappingFrame frame: CGRect, duration: Double, animationOptions: UIViewAnimationOptions) {
-        getDefaultValuesIfNeeded()
-        
-        // View may be attached to window directly therefore allow frame adjust if there is no view controller.
-        // However, adjust if there is view controller for better animations.
-        guard let viewController = _viewController else { return }
-        
-        // Do not adjust for .notLoaded and .didLoad because will be adjusted in willAppear
-        // Do not adjust for .willDisappear and .didDisappear for better disappear animation
-        guard viewController.viewState == .didAppear || viewController.viewState == .willAppear || viewController.viewState == .didAttach else { return }
-        
-        // Animate only .didAppear state to prevent broken transitions.
-        if animate && window != nil && viewController.viewState == .didAppear {
-            // Assure view layouted before animations start and we get default values
-            let vcView = viewController.view
-            vcView?.layoutIfNeeded()
-            
-            UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: {
-                self.configureSize(keyboardOverlappingFrame: frame)
-                vcView?.layoutIfNeeded()
-            }, completion: nil)
-        } else {
-            configureSize(keyboardOverlappingFrame: frame)
-        }
+        configureSize(keyboardOverlappingFrame: frame, duration: duration, animationOptions: animationOptions)
     }
 }
