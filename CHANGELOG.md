@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 `KeyboardAvoidingView` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.5](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.5)
+Released on 2018-03-23.
+
+#### Fixed
+- Animation issue fix when controller contained in parent which size depends on child
+
+
 ## [2.2.4](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.4)
 Released on 2018-03-06.
 

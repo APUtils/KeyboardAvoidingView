@@ -27,3 +27,10 @@ extension UIView {
         return nil
     }
 }
+
+
+extension UIViewController {
+    var mainParent: UIViewController {
+        return parent?.mainParent ?? self
+    }
+}

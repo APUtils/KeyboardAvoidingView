@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B024CF592035F4DD0008EC7B /* KeyboardAvoidingView.h in Headers */ = {isa = PBXBuildFile; fileRef = B024CF572035F4DD0008EC7B /* KeyboardAvoidingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B024CF612035F6660008EC7B /* KeyboardAvoidingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */; };
-		B024CF622035F6660008EC7B /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF602035F6660008EC7B /* UIView+Utils.swift */; };
+		B024CF622035F6660008EC7B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF602035F6660008EC7B /* Extensions.swift */; };
 		B024CF632035F6700008EC7B /* KeyboardAvoidingView.swift in Headers */ = {isa = PBXBuildFile; fileRef = B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		B03A625920383F290002DC9F /* APExtensionsViewState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03A625820383F290002DC9F /* APExtensionsViewState.framework */; };
 		B0F82F7020375930004FC037 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F82F6D20375930004FC037 /* KeyboardManager.swift */; };
@@ -22,7 +22,7 @@
 		B024CF572035F4DD0008EC7B /* KeyboardAvoidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardAvoidingView.h; sourceTree = "<group>"; };
 		B024CF582035F4DD0008EC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAvoidingView.swift; path = Classes/KeyboardAvoidingView.swift; sourceTree = "<group>"; };
-		B024CF602035F6660008EC7B /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Utils.swift"; path = "Classes/UIView+Utils.swift"; sourceTree = "<group>"; };
+		B024CF602035F6660008EC7B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Classes/Extensions.swift; sourceTree = "<group>"; };
 		B03A625820383F290002DC9F /* APExtensionsViewState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APExtensionsViewState.framework; path = Carthage/Build/iOS/APExtensionsViewState.framework; sourceTree = "<group>"; };
 		B0F82F6D20375930004FC037 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardManager.swift; path = Classes/KeyboardManager.swift; sourceTree = "<group>"; };
 		B0F82F6E20375930004FC037 /* KeyboardAvoidingViewLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardAvoidingViewLoader.h; path = Classes/KeyboardAvoidingViewLoader.h; sourceTree = "<group>"; };
@@ -61,13 +61,13 @@
 		B024CF562035F4DD0008EC7B /* KeyboardAvoidingView */ = {
 			isa = PBXGroup;
 			children = (
+				B024CF602035F6660008EC7B /* Extensions.swift */,
 				B024CF582035F4DD0008EC7B /* Info.plist */,
 				B024CF572035F4DD0008EC7B /* KeyboardAvoidingView.h */,
 				B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */,
 				B0F82F6E20375930004FC037 /* KeyboardAvoidingViewLoader.h */,
 				B0F82F6F20375930004FC037 /* KeyboardAvoidingViewLoader.m */,
 				B0F82F6D20375930004FC037 /* KeyboardManager.swift */,
-				B024CF602035F6660008EC7B /* UIView+Utils.swift */,
 			);
 			path = KeyboardAvoidingView;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B024CF622035F6660008EC7B /* UIView+Utils.swift in Sources */,
+				B024CF622035F6660008EC7B /* Extensions.swift in Sources */,
 				B024CF612035F6660008EC7B /* KeyboardAvoidingView.swift in Sources */,
 				B0F82F7020375930004FC037 /* KeyboardManager.swift in Sources */,
 				B0F82F7220375930004FC037 /* KeyboardAvoidingViewLoader.m in Sources */,
