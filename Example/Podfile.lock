@@ -15,7 +15,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - KeyboardAvoidingView (2.2.5):
+  - KeyboardAvoidingView (2.2.6):
     - APExtensions/ViewState (>= 4.5.0)
   - Nimble (7.0.3)
   - Nimble-Snapshots (6.3.0):
@@ -54,7 +54,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   APExtensions: fb4a458bdd8230f9c2c0c95927397a634e179872
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  KeyboardAvoidingView: 7963640b22716e963e8ca8f3129786b2801b4f36
+  KeyboardAvoidingView: 26627a1bfc440dddb2428fb4ec3ac3e97cdea683
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
