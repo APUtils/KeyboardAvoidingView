@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0427D85CB35D9DEEFC03DFC0 /* Pods_KeyboardAvoidingView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391C6CF853A7507879875666 /* Pods_KeyboardAvoidingView_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		85A4C5553A53F242827CF1C6 /* Pods_KeyboardAvoidingView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE417170326D19047AE8C2A /* Pods_KeyboardAvoidingView_Example.framework */; };
 		B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CC1F13AFCE00A02878 /* .cocoadocs.yml */; };
 		B06687D01F13AFCE00A02878 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B06687CD1F13AFCE00A02878 /* .gitignore */; };
 		B06687D11F13AFCE00A02878 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CE1F13AFCE00A02878 /* .travis.yml */; };
@@ -23,6 +21,8 @@
 		B0FBD92C1F0D5FA700848ADE /* UIView+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */; };
 		B0FBD92E1F0D5FC000848ADE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92D1F0D5FC000848ADE /* TextField.swift */; };
 		B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		C6AA4164A666686274CB7111 /* Pods_KeyboardAvoidingView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84047E52715BB47D0F0BBB4 /* Pods_KeyboardAvoidingView_Example.framework */; };
+		C8D5F1A179C6ABF6B151FF2E /* Pods_KeyboardAvoidingView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A98169AB628A1CD85CAEAA /* Pods_KeyboardAvoidingView_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +38,8 @@
 /* Begin PBXFileReference section */
 		103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KeyboardAvoidingView.podspec; path = ../KeyboardAvoidingView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		18C65CCE2C5294AAC77045E7 /* Pods-KeyboardAvoidingView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1BE417170326D19047AE8C2A /* Pods_KeyboardAvoidingView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAvoidingView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D244CF39B47C0D695EE88B /* Pods-KeyboardAvoidingView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		37EDE0E6E1EF44D2D9A843C1 /* Pods-KeyboardAvoidingView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		391C6CF853A7507879875666 /* Pods_KeyboardAvoidingView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAvoidingView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D0F72030B1EC613BED2B9C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		48DF8B513F1AE6906B8FADC1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* KeyboardAvoidingView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardAvoidingView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +52,9 @@
 		607FACE51AFB9204008FA782 /* KeyboardAvoidingView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardAvoidingView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		66A98169AB628A1CD85CAEAA /* Pods_KeyboardAvoidingView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAvoidingView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D362DCD56DAE51046FED1C /* Pods_KeyboardAvoidingView_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAvoidingView_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A84047E52715BB47D0F0BBB4 /* Pods_KeyboardAvoidingView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeyboardAvoidingView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05D8C631F0E7A2D0039A8B2 /* KeyboardAvoidingClip.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = KeyboardAvoidingClip.gif; sourceTree = "<group>"; };
 		B05D8C761F0FD74D0039A8B2 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		B06687CC1F13AFCE00A02878 /* .cocoadocs.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .cocoadocs.yml; path = ../.cocoadocs.yml; sourceTree = "<group>"; };
@@ -64,6 +64,7 @@
 		B0A073AD1F3A590C001B8CC6 /* podCheck.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
 		B0A073AE1F3A590C001B8CC6 /* podPush.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = podPush.command; path = ../podPush.command; sourceTree = "<group>"; };
 		B0C4CCC71F7457B000B4F810 /* podInstall.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podInstall.command; sourceTree = "<group>"; };
+		B0E5B41C21133D33005D8319 /* DEPLOY PROCESS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "DEPLOY PROCESS.md"; path = "../DEPLOY PROCESS.md"; sourceTree = "<group>"; };
 		B0E9E2C12038473800C83B85 /* APExtensionsViewState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APExtensionsViewState.framework; path = ../Carthage/Build/iOS/APExtensionsViewState.framework; sourceTree = "<group>"; };
 		B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Storyboard.swift"; sourceTree = "<group>"; };
 		B0FBD92D1F0D5FC000848ADE /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -76,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85A4C5553A53F242827CF1C6 /* Pods_KeyboardAvoidingView_Example.framework in Frameworks */,
+				C6AA4164A666686274CB7111 /* Pods_KeyboardAvoidingView_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0427D85CB35D9DEEFC03DFC0 /* Pods_KeyboardAvoidingView_Tests.framework in Frameworks */,
+				C8D5F1A179C6ABF6B151FF2E /* Pods_KeyboardAvoidingView_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +163,7 @@
 				B06687CD1F13AFCE00A02878 /* .gitignore */,
 				B06687CE1F13AFCE00A02878 /* .travis.yml */,
 				B05D8C761F0FD74D0039A8B2 /* CHANGELOG.md */,
+				B0E5B41C21133D33005D8319 /* DEPLOY PROCESS.md */,
 				103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */,
 				44D0F72030B1EC613BED2B9C /* LICENSE */,
 				B0A073AD1F3A590C001B8CC6 /* podCheck.command */,
@@ -206,9 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				B0E9E2C12038473800C83B85 /* APExtensionsViewState.framework */,
-				1BE417170326D19047AE8C2A /* Pods_KeyboardAvoidingView_Example.framework */,
-				391C6CF853A7507879875666 /* Pods_KeyboardAvoidingView_Tests.framework */,
 				74D362DCD56DAE51046FED1C /* Pods_KeyboardAvoidingView_UITests.framework */,
+				A84047E52715BB47D0F0BBB4 /* Pods_KeyboardAvoidingView_Example.framework */,
+				66A98169AB628A1CD85CAEAA /* Pods_KeyboardAvoidingView_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,7 +226,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				E93245232A3CCE6144B7EAAB /* [CP] Embed Pods Frameworks */,
+				F46C0031C013ED6369235B6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,7 +245,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				4142F334968116C89DB23E8F /* [CP] Embed Pods Frameworks */,
+				67750190170CDF170BB6BD5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +270,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -340,30 +343,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4142F334968116C89DB23E8F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		41E6646CC7277B01D7E13AE9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,7 +361,32 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E93245232A3CCE6144B7EAAB /* [CP] Embed Pods Frameworks */ = {
+		67750190170CDF170BB6BD5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46C0031C013ED6369235B6D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -562,12 +566,15 @@
 			baseConfigurationReference = 18C65CCE2C5294AAC77045E7 /* Pods-KeyboardAvoidingView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KeyboardAvoidingView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -579,12 +586,15 @@
 			baseConfigurationReference = 28D244CF39B47C0D695EE88B /* Pods-KeyboardAvoidingView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KeyboardAvoidingView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

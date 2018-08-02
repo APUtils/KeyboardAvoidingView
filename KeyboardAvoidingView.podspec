@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KeyboardAvoidingView'
-  s.version          = '2.2.6'
+  s.version          = '2.2.7'
   s.summary          = 'View that adjusts it\'s bottom constraint to avoid keyboard'
 
 # This description is used to generate tags and improve search results.
@@ -31,6 +31,7 @@ Common usage: set `KeyboardAvoidingView` class to any view (usually it's base co
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'KeyboardAvoidingView/Classes/**/*'
+  s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }
   
   # s.resource_bundles = {
   #   'KeyboardAvoidingView' => ['KeyboardAvoidingView/Assets/*.png']

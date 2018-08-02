@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file.
 `KeyboardAvoidingView` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.7](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.7)
+Released on 2018-08-02.
+
+#### Added
+- Static library support
+
+
+## [2.2.6](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.6)
+Released on 2018-08-02.
+
+#### Changed
+- Made KeyboardAvoidingViewLoader header private
+
+
 ## [2.2.5](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/2.2.5)
 Released on 2018-03-23.
 
