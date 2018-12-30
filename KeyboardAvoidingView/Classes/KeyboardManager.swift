@@ -27,7 +27,7 @@ private let c_hiddenKeyboardFrame = CGRect(x: 0, y: c_screenBounds.height, width
     ///   - frame: New keyboard overlapping frame.
     ///   - duration: Keyboard animation duration.
     ///   - animationOptions: Keyboard animation options.
-    func keyboard(willChangeOverlappingFrame frame: CGRect, duration: Double, animationOptions: UIViewAnimationOptions)
+    func keyboard(willChangeOverlappingFrame frame: CGRect, duration: Double, animationOptions: UIView.AnimationOptions)
 }
 
 /// Manager that observes keyboard frame.
@@ -102,22 +102,22 @@ public class KeyboardManager: NSObject {
     }
     
     private func setupNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillChangeFrame), name: .UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     // ******************************* MARK: - Private Methods - Notifications
     
     @objc private func onKeyboardWillChangeFrame(_ notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
-        guard let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        guard let keyboardEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
         guard keyboardEndFrame != keyboardFrame else { return }
         if c_debugWork { print("KeyboardManager: frame will change to \(keyboardEndFrame)") }
         
-        let duration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
-        let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
-        let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIViewAnimationOptions().rawValue
-        let animationCurve: UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
-        let options: UIViewAnimationOptions = [animationCurve, .beginFromCurrentState]
+        let duration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+        let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+        let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions().rawValue
+        let animationCurve: UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
+        let options: UIView.AnimationOptions = [animationCurve, .beginFromCurrentState]
         
         keyboardFrame = keyboardEndFrame
         listeners.allObjects.forEach { $0.keyboard(willChangeOverlappingFrame: keyboardOverlappingFrame, duration: duration, animationOptions: options) }

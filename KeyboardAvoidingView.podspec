@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KeyboardAvoidingView'
-  s.version          = '2.2.7'
+  s.version          = '3.0.0'
   s.summary          = 'View that adjusts it\'s bottom constraint to avoid keyboard'
 
 # This description is used to generate tags and improve search results.

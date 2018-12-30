@@ -122,7 +122,7 @@ public class KeyboardAvoidingView: UIView {
         configureSize(keyboardOverlappingFrame: KeyboardManager.shared.keyboardOverlappingFrame, duration: nil, animationOptions: nil)
     }
     
-    private func configureSize(keyboardOverlappingFrame frame: CGRect, duration: Double?, animationOptions: UIViewAnimationOptions?) {
+    private func configureSize(keyboardOverlappingFrame frame: CGRect, duration: Double?, animationOptions: UIView.AnimationOptions?) {
         getDefaultValuesIfNeeded()
         
         // Support only views that has viewControllers for now
@@ -261,7 +261,7 @@ extension KeyboardAvoidingView: KeyboardControllerListener {
     // TODO: Add keyboard hide notification because on iPads keyboard can be undocked and moved
     // https://developer.apple.com/videos/play/wwdc2017/242/
     
-    public func keyboard(willChangeOverlappingFrame frame: CGRect, duration: Double, animationOptions: UIViewAnimationOptions) {
+    public func keyboard(willChangeOverlappingFrame frame: CGRect, duration: Double, animationOptions: UIView.AnimationOptions) {
         configureSize(keyboardOverlappingFrame: frame, duration: duration, animationOptions: animationOptions)
     }
 }
