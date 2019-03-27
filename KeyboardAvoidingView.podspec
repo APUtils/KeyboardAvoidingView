@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KeyboardAvoidingView'
-  s.version          = '3.0.0'
+  s.version          = '4.0.0'
   s.summary          = 'View that adjusts it\'s bottom constraint to avoid keyboard'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,5 @@ Common usage: set `KeyboardAvoidingView` class to any view (usually it's base co
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.private_header_files = 'KeyboardAvoidingView/Classes/KeyboardAvoidingViewLoader.h'
   s.frameworks = 'Foundation', 'UIKit'
-  s.dependency 'APExtensions/ViewState', '>= 4.5.0'
+  s.dependency 'APExtensions/ViewState', '>= 7.0.0'
 end

@@ -10,9 +10,16 @@ import UIKit
 
 
 extension UIView {
+    /// All view superviews to the top most
+    #if compiler(<5)
     var _superviews: AnySequence<UIView> {
         return sequence(first: self, next: { $0.superview }).dropFirst(1)
     }
+    #else
+    var _superviews: DropFirstSequence<UnfoldSequence<UIView, (UIView?, Bool)>> {
+        return sequence(first: self, next: { $0.superview }).dropFirst(1)
+    }
+    #endif
     
     var _viewController: UIViewController? {
         var nextResponder: UIResponder? = self
