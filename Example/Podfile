@@ -1,5 +1,5 @@
 # Deployment Target
-platform :ios, '8.0'
+platform :ios, '8.1'
 
 # Ignore pods code warnings
 inhibit_all_warnings!
@@ -23,8 +23,13 @@ end
 
 
 post_install do |installer|
-    # Add podInstall.command and podUpdate.command shell scripts to Pods project
-    pods_project = installer.pods_project
-    pods_project.new_file "../podInstall.command"
-    pods_project.new_file "../podUpdate.command"
+  # Add podInstall.command and podUpdate.command shell scripts to Pods project
+  pods_project = installer.pods_project
+  pods_project.new_file "../Scripts/Cocoapods/podInstall.command"
+  pods_project.new_file "../Scripts/Cocoapods/podUpdate.command"
+  
+  # Silence Pods project warning
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings['CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED'] = 'YES'
+  end
 end

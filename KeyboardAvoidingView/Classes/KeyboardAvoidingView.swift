@@ -4,13 +4,7 @@
 //
 
 import UIKit
-
-#if CARTHAGE
-    import APExtensionsViewState
-#else
-    import APExtensions
-#endif
-
+import ViewState
 
 private let c_screenBounds = UIScreen.main.bounds
 
@@ -19,19 +13,19 @@ private let c_screenBounds = UIScreen.main.bounds
 
 /// Configures bottom constraint constant or frame height to avoid keyboard.
 /// Bottom constraint should be added to Layout Guide or superview bottom.
-public class KeyboardAvoidingView: UIView {
+open class KeyboardAvoidingView: UIView {
     
     // ******************************* MARK: - Public Properties
     
     /// Disable/enable resize back when keyboard dismiss. Might be helpful for some animations.
     /// Default is `true` - default constant will be restored.
-    @IBInspectable public var restoreDefaultConstant: Bool = true
+    @IBInspectable open var restoreDefaultConstant: Bool = true
     
     /// Disable/enable animations. Default is `true` - animations enabled.
-    public var animate = true
+    open var animate = true
     
     /// Disable reaction to keyboard notifications. Default is `false` - view is reacting to keyobard notifications.
-    public var disable = false
+    open var disable = false
     
     // ******************************* MARK: - Private properties
     
@@ -87,7 +81,7 @@ public class KeyboardAvoidingView: UIView {
         super.init(coder: aDecoder)
     }
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         
         setup()
@@ -107,7 +101,7 @@ public class KeyboardAvoidingView: UIView {
     // ******************************* MARK: - Public Methods
     
     /// Set bottom constraint or frame height to default value
-    public func resetToDefault() {
+    open func resetToDefault() {
         if let defaultConstant = defaultConstant {
             bottomConstraint?.constant = defaultConstant
             _viewController?.view.layoutIfNeeded()
@@ -174,14 +168,14 @@ public class KeyboardAvoidingView: UIView {
     
     // ******************************* MARK: - UIView Overrides
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         
         configureSize()
     }
     
     // Make keyboard avoiding view transparent for touches
-    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    override open func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let result = super.hitTest(point, with: event)
         if result == self { return nil }
         
@@ -261,7 +255,7 @@ extension KeyboardAvoidingView: KeyboardControllerListener {
     // TODO: Add keyboard hide notification because on iPads keyboard can be undocked and moved
     // https://developer.apple.com/videos/play/wwdc2017/242/
     
-    public func keyboard(willChangeOverlappingFrame frame: CGRect, duration: Double, animationOptions: UIView.AnimationOptions) {
+    open func keyboard(willChangeOverlappingFrame frame: CGRect, duration: Double, animationOptions: UIView.AnimationOptions) {
         configureSize(keyboardOverlappingFrame: frame, duration: duration, animationOptions: animationOptions)
     }
 }

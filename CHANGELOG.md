@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 `KeyboardAvoidingView` adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [5.0.0](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/5.0.0)
+Released on 2020-01-03.
+
+#### Migration
+- Migrated to `ViewState` framework
+
+
 ## [4.0.0](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/4.0.0)
 Released on 2019-03-27.
 

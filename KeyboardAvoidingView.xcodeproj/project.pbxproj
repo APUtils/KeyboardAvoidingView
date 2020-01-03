@@ -7,23 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D47E41123BF1DF700C4BFDC /* ViewState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D47E41023BF1DF700C4BFDC /* ViewState.framework */; };
 		B024CF592035F4DD0008EC7B /* KeyboardAvoidingView.h in Headers */ = {isa = PBXBuildFile; fileRef = B024CF572035F4DD0008EC7B /* KeyboardAvoidingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B024CF612035F6660008EC7B /* KeyboardAvoidingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */; };
 		B024CF622035F6660008EC7B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B024CF602035F6660008EC7B /* Extensions.swift */; };
 		B024CF632035F6700008EC7B /* KeyboardAvoidingView.swift in Headers */ = {isa = PBXBuildFile; fileRef = B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		B03A625920383F290002DC9F /* APExtensionsViewState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03A625820383F290002DC9F /* APExtensionsViewState.framework */; };
 		B0F82F7020375930004FC037 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F82F6D20375930004FC037 /* KeyboardManager.swift */; };
 		B0F82F7120375930004FC037 /* KeyboardAvoidingViewLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = B0F82F6E20375930004FC037 /* KeyboardAvoidingViewLoader.h */; };
 		B0F82F7220375930004FC037 /* KeyboardAvoidingViewLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F82F6F20375930004FC037 /* KeyboardAvoidingViewLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D47E3FF23BF1BCB00C4BFDC /* utils.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = utils.sh; sourceTree = "<group>"; };
+		0D47E40023BF1BCB00C4BFDC /* carthageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthageUpdate.command; sourceTree = "<group>"; };
+		0D47E40123BF1BCB00C4BFDC /* carthageSetup.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = carthageSetup.rb; sourceTree = "<group>"; };
+		0D47E40223BF1BCB00C4BFDC /* carthageSetup.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthageSetup.command; sourceTree = "<group>"; };
+		0D47E40323BF1BCB00C4BFDC /* carthageInstall.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthageInstall.command; sourceTree = "<group>"; };
+		0D47E40423BF1BCB00C4BFDC /* utils.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = utils.rb; sourceTree = "<group>"; };
+		0D47E40523BF1BCB00C4BFDC /* carthageAdd.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthageAdd.command; sourceTree = "<group>"; };
+		0D47E40623BF1BCB00C4BFDC /* carthageRemove.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = carthageRemove.rb; sourceTree = "<group>"; };
+		0D47E40723BF1BCB00C4BFDC /* carthageRemove.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthageRemove.command; sourceTree = "<group>"; };
+		0D47E40823BF1BCB00C4BFDC /* carthageAdd.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = carthageAdd.rb; sourceTree = "<group>"; };
+		0D47E40923BF1BCB00C4BFDC /* carthageInstallTests.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthageInstallTests.command; sourceTree = "<group>"; };
+		0D47E41023BF1DF700C4BFDC /* ViewState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewState.framework; path = Carthage/Build/iOS/ViewState.framework; sourceTree = "<group>"; };
 		B024CF542035F4DD0008EC7B /* KeyboardAvoidingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyboardAvoidingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B024CF572035F4DD0008EC7B /* KeyboardAvoidingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardAvoidingView.h; sourceTree = "<group>"; };
 		B024CF582035F4DD0008EC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B024CF5F2035F6660008EC7B /* KeyboardAvoidingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardAvoidingView.swift; path = Classes/KeyboardAvoidingView.swift; sourceTree = "<group>"; };
 		B024CF602035F6660008EC7B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Classes/Extensions.swift; sourceTree = "<group>"; };
-		B03A625820383F290002DC9F /* APExtensionsViewState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APExtensionsViewState.framework; path = Carthage/Build/iOS/APExtensionsViewState.framework; sourceTree = "<group>"; };
 		B0F82F6D20375930004FC037 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardManager.swift; path = Classes/KeyboardManager.swift; sourceTree = "<group>"; };
 		B0F82F6E20375930004FC037 /* KeyboardAvoidingViewLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardAvoidingViewLoader.h; path = Classes/KeyboardAvoidingViewLoader.h; sourceTree = "<group>"; };
 		B0F82F6F20375930004FC037 /* KeyboardAvoidingViewLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyboardAvoidingViewLoader.m; path = Classes/KeyboardAvoidingViewLoader.m; sourceTree = "<group>"; };
@@ -34,13 +45,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03A625920383F290002DC9F /* APExtensionsViewState.framework in Frameworks */,
+				0D47E41123BF1DF700C4BFDC /* ViewState.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D47E3FE23BF1BCB00C4BFDC /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				0D47E40523BF1BCB00C4BFDC /* carthageAdd.command */,
+				0D47E40823BF1BCB00C4BFDC /* carthageAdd.rb */,
+				0D47E40323BF1BCB00C4BFDC /* carthageInstall.command */,
+				0D47E40923BF1BCB00C4BFDC /* carthageInstallTests.command */,
+				0D47E40723BF1BCB00C4BFDC /* carthageRemove.command */,
+				0D47E40623BF1BCB00C4BFDC /* carthageRemove.rb */,
+				0D47E40223BF1BCB00C4BFDC /* carthageSetup.command */,
+				0D47E40123BF1BCB00C4BFDC /* carthageSetup.rb */,
+				0D47E40023BF1BCB00C4BFDC /* carthageUpdate.command */,
+				0D47E40423BF1BCB00C4BFDC /* utils.rb */,
+				0D47E3FF23BF1BCB00C4BFDC /* utils.sh */,
+			);
+			name = Carthage;
+			path = Scripts/Carthage;
+			sourceTree = "<group>";
+		};
 		B024CF4A2035F4DD0008EC7B = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +105,8 @@
 		B03A625720383F290002DC9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B03A625820383F290002DC9F /* APExtensionsViewState.framework */,
+				0D47E3FE23BF1BCB00C4BFDC /* Carthage */,
+				0D47E41023BF1DF700C4BFDC /* ViewState.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -281,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -314,7 +345,6 @@
 				);
 				INFOPLIST_FILE = KeyboardAvoidingView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -345,7 +375,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "CARTHAGE=1";
 				INFOPLIST_FILE = KeyboardAvoidingView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

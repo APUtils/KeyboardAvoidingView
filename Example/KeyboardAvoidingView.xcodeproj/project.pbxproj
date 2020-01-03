@@ -12,12 +12,6 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CC1F13AFCE00A02878 /* .cocoadocs.yml */; };
-		B06687D01F13AFCE00A02878 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B06687CD1F13AFCE00A02878 /* .gitignore */; };
-		B06687D11F13AFCE00A02878 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06687CE1F13AFCE00A02878 /* .travis.yml */; };
-		B0A073AF1F3A590C001B8CC6 /* podCheck.command in Resources */ = {isa = PBXBuildFile; fileRef = B0A073AD1F3A590C001B8CC6 /* podCheck.command */; };
-		B0A073B01F3A590C001B8CC6 /* podPush.command in Resources */ = {isa = PBXBuildFile; fileRef = B0A073AE1F3A590C001B8CC6 /* podPush.command */; };
-		B0C4CCC81F7457B000B4F810 /* podInstall.command in Resources */ = {isa = PBXBuildFile; fileRef = B0C4CCC71F7457B000B4F810 /* podInstall.command */; };
 		B0FBD92C1F0D5FA700848ADE /* UIView+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */; };
 		B0FBD92E1F0D5FC000848ADE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FBD92D1F0D5FC000848ADE /* TextField.swift */; };
 		B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -36,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D47E41223BF1E5100C4BFDC /* carthageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = carthageUpdate.command; path = ../Scripts/Carthage/carthageUpdate.command; sourceTree = "<group>"; };
 		103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KeyboardAvoidingView.podspec; path = ../KeyboardAvoidingView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		18C65CCE2C5294AAC77045E7 /* Pods-KeyboardAvoidingView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		28D244CF39B47C0D695EE88B /* Pods-KeyboardAvoidingView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,12 +58,10 @@
 		B0A073AB1F3A58A1001B8CC6 /* customClass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = customClass.png; sourceTree = "<group>"; };
 		B0A073AD1F3A590C001B8CC6 /* podCheck.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = podCheck.command; path = ../podCheck.command; sourceTree = "<group>"; };
 		B0A073AE1F3A590C001B8CC6 /* podPush.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = podPush.command; path = ../podPush.command; sourceTree = "<group>"; };
-		B0C4CCC71F7457B000B4F810 /* podInstall.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podInstall.command; sourceTree = "<group>"; };
 		B0E5B41C21133D33005D8319 /* DEPLOY PROCESS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "DEPLOY PROCESS.md"; path = "../DEPLOY PROCESS.md"; sourceTree = "<group>"; };
 		B0E9E2C12038473800C83B85 /* APExtensionsViewState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APExtensionsViewState.framework; path = ../Carthage/Build/iOS/APExtensionsViewState.framework; sourceTree = "<group>"; };
 		B0FBD92B1F0D5FA700848ADE /* UIView+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Storyboard.swift"; sourceTree = "<group>"; };
 		B0FBD92D1F0D5FC000848ADE /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		B0FD602620408473004C1D01 /* podUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = podUpdate.command; sourceTree = "<group>"; };
 		BC527DE7A0DE9DB49F3E0778 /* Pods-KeyboardAvoidingView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Tests/Pods-KeyboardAvoidingView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E26A064B224BC98D00ABD6C3 /* checkBuild.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = checkBuild.command; path = ../checkBuild.command; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,10 +161,9 @@
 				B0E5B41C21133D33005D8319 /* DEPLOY PROCESS.md */,
 				103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */,
 				44D0F72030B1EC613BED2B9C /* LICENSE */,
+				0D47E41223BF1E5100C4BFDC /* carthageUpdate.command */,
 				B0A073AD1F3A590C001B8CC6 /* podCheck.command */,
-				B0C4CCC71F7457B000B4F810 /* podInstall.command */,
 				B0A073AE1F3A590C001B8CC6 /* podPush.command */,
-				B0FD602620408473004C1D01 /* podUpdate.command */,
 				48DF8B513F1AE6906B8FADC1 /* README.md */,
 			);
 			name = "Podspec Metadata";
@@ -283,10 +275,9 @@
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "KeyboardAvoidingView" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -306,14 +297,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A073B01F3A590C001B8CC6 /* podPush.command in Resources */,
-				B06687D01F13AFCE00A02878 /* .gitignore in Resources */,
-				B06687D11F13AFCE00A02878 /* .travis.yml in Resources */,
 				B0FBD9311F0D64DC00848ADE /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				B0C4CCC81F7457B000B4F810 /* podInstall.command in Resources */,
-				B06687CF1F13AFCE00A02878 /* .cocoadocs.yml in Resources */,
-				B0A073AF1F3A590C001B8CC6 /* podCheck.command in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,11 +378,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/APExtensions/APExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/KeyboardAvoidingView/KeyboardAvoidingView.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewState/ViewState.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyboardAvoidingView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewState.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -504,12 +491,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -554,11 +541,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -571,14 +558,13 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KeyboardAvoidingView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView-Example${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -590,14 +576,13 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KeyboardAvoidingView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.KeyboardAvoidingView-Example${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -615,7 +600,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.$(PRODUCT_NAME:rfc1034identifier)${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyboardAvoidingView_Example.app/KeyboardAvoidingView_Example";
 			};
 			name = Debug;
@@ -630,7 +614,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.$(PRODUCT_NAME:rfc1034identifier)${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeyboardAvoidingView_Example.app/KeyboardAvoidingView_Example";
 			};
 			name = Release;
