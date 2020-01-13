@@ -128,9 +128,16 @@ open class KeyboardAvoidingView: UIView {
         
         // Animate only .didAppear state to prevent broken transitions.
         if animate && window != nil && viewController.viewState == .didAppear, let duration = duration, let animationOptions = animationOptions {
+            
+            // Stop scrolling if needed
+            allSubviews
+                .compactMap { $0 as? UIScrollView }
+                .forEach { $0.stopScrolling() }
+            
             // Assure view layouted before animations start
             let vcView = viewController.mainParent.view
             vcView?.layoutIfNeeded()
+            
             UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: {
                 self.updateSize(keyboardOverlappingFrame: frame)
                 vcView?.layoutIfNeeded()

@@ -21,6 +21,13 @@ extension UIView {
     }
     #endif
     
+    /// Returns all view's subviews
+    var allSubviews: [UIView] {
+        var allSubviews = self.subviews
+        allSubviews.forEach { allSubviews.append(contentsOf: $0.allSubviews) }
+        return allSubviews
+    }
+    
     var _viewController: UIViewController? {
         var nextResponder: UIResponder? = self
         while nextResponder != nil {
@@ -39,5 +46,13 @@ extension UIView {
 extension UIViewController {
     var mainParent: UIViewController {
         return parent?.mainParent ?? self
+    }
+}
+
+extension UIScrollView {
+    
+    /// Stops current scroll
+    func stopScrolling() {
+        setContentOffset(contentOffset, animated: false)
     }
 }
