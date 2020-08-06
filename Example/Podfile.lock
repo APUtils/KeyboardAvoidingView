@@ -8,10 +8,10 @@ PODS:
   - APExtensions/Core (7.0.1)
   - APExtensions/Storyboard (7.0.1)
   - APExtensions/ViewConfiguration (7.0.1)
-  - KeyboardAvoidingView (4.0.0):
+  - KeyboardAvoidingView (5.0.0):
     - ViewState (>= 1.0.0)
-  - Nimble (8.0.5)
-  - Quick (2.2.0)
+  - Nimble (8.1.1)
+  - Quick (3.0.0)
   - ViewState (1.0.0)
 
 DEPENDENCIES:
@@ -21,7 +21,7 @@ DEPENDENCIES:
   - Quick
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Nimble
     - Quick
     - ViewState
@@ -34,16 +34,16 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: 0d1ff953cf01c670cc40ad789db983be4d67128e
+    :commit: b4274071aef138430060fc8340d89bdcde89f926
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
-  APExtensions: 681fbb94d87100ff8eeb74e78ace0ff9612979e9
-  KeyboardAvoidingView: 1a88d6e14ef74f904e0d99289e7bf55e06d16156
-  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
-  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  APExtensions: e0377240c9db7bc42c3b864c039ba70c1b4034a3
+  KeyboardAvoidingView: 93c4f709386c998b7b7f6b405a05c5c3585410a7
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   ViewState: 78aa77483e74e592c22e841619b853bc686843be
 
-PODFILE CHECKSUM: 818c482c02f8eb050919700dd738240f8f719638
+PODFILE CHECKSUM: c44eec2943cf97fb7aa442fe4c620c0c97ebc099
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

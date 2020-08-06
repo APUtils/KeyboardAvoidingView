@@ -62,6 +62,13 @@ In most cases it should be only one `KeyboardAvoidingView` for screen. Be sure t
 
 See example project for more details.
 
+## Usage together with IQKeyboardManager
+
+`KeyboardAvoidingView` more likely will conflict with `IQKeyboardManager` so you have to disable `IQKeyboardManager` on the screen you are using `KeyboardAvoidingView`. Please reffer to the `IQKeyboardManager` [documentation](http://cocoadocs.org/docsets/IQKeyboardManager/5.0.4/Classes/IQKeyboardManager.html#//api/name/disabledDistanceHandlingClasses). More likely it'll look something like this:
+```swift
+IQKeyboardManager.shared.disabledDistanceHandlingClasses.append(contentsOf: [MyViewController.self])
+```
+
 ## Contributions
 
 Any contribution is more than welcome! You can contribute through pull requests and issues on GitHub.
