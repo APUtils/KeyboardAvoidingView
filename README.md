@@ -1,6 +1,7 @@
 # KeyboardAvoidingView
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Version](https://img.shields.io/cocoapods/v/KeyboardAvoidingView.svg?style=flat)](http://cocoapods.org/pods/KeyboardAvoidingView)
 [![License](https://img.shields.io/cocoapods/l/KeyboardAvoidingView.svg?style=flat)](http://cocoapods.org/pods/KeyboardAvoidingView)
 [![Platform](https://img.shields.io/cocoapods/p/KeyboardAvoidingView.svg?style=flat)](http://cocoapods.org/pods/KeyboardAvoidingView)
@@ -29,7 +30,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/KeyboardAvoidingView" ~> 5.0
+github "APUtils/KeyboardAvoidingView" ~> 5.1
 ```
 
 Then add both `KeyboardAvoidingView` and `ViewState` frameworks to your project. Remove `APExtensionsViewState` dependency if you previously had it.
@@ -40,7 +41,19 @@ KeyboardAvoidingView is available through [CocoaPods](http://cocoapods.org). To 
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "KeyboardAvoidingView", '~> 5.0'
+pod "KeyboardAvoidingView", '~> 5.1'
+```
+
+#### Swift Package Manager
+
+The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+
+Once you have your Swift package set up, adding `KeyboardAvoidingView` as a dependency is as easy as adding it to the dependencies value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/APUtils/KeyboardAvoidingView.git", .upToNextMajor(from: "5.1.0"))
+]
 ```
 
 ## Usage

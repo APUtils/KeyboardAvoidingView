@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 `KeyboardAvoidingView` adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.1.0](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/5.1.0)
+Released on 2021-04-07.
+
+#### Added
+- SPM support
+
+#### Changed
+- iOS 9.0 is the minimum supported version
+
 
 ## [5.0.1](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/5.0.1)
 Released on 2020-08-06.

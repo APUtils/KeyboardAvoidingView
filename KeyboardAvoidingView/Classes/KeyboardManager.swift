@@ -6,8 +6,8 @@
 //  Copyright © 2018 Anton Plebanovich. All rights reserved.
 //
 
+import ViewState
 import UIKit
-
 
 #if DEBUG
     private let c_debugWork = false
@@ -98,6 +98,7 @@ public class KeyboardManager: NSObject {
     }
     
     private func setup() {
+        ViewState.setupOnce()
         setupNotifications()
     }
     
