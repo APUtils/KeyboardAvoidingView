@@ -131,7 +131,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B024CF5C2035F4DD0008EC7B /* Build configuration list for PBXNativeTarget "KeyboardAvoidingView" */;
 			buildPhases = (
-				0D267FAD261DF6F300EDD27E /* Carthage Install */,
 				B024CF4F2035F4DD0008EC7B /* Sources */,
 				B024CF502035F4DD0008EC7B /* Frameworks */,
 				B024CF512035F4DD0008EC7B /* Headers */,
@@ -189,27 +188,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0D267FAD261DF6F300EDD27E /* Carthage Install */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Carthage Install";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "source ~/.bash_profile\nenv -i GITHUB_ACCESS_TOKEN=\"$GITHUB_ACCESS_TOKEN\" DEVELOPER_DIR=\"$DEVELOPER_DIR\" PATH=\"$PATH\" bash \"Scripts/Carthage/carthageInstall.command\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B024CF4F2035F4DD0008EC7B /* Sources */ = {
