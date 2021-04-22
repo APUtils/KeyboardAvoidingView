@@ -9,6 +9,7 @@
 import UIKit
 
 import APExtensions
+import ViewState
 
 
 private var c_vcCounter = 0
@@ -31,7 +32,7 @@ public class ViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+        hideKeyboardOnTouch = true
     }
     
     public override func viewWillAppear(_ animated: Bool) {

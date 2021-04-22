@@ -39,6 +39,9 @@ public class KeyboardManager: NSObject {
     
     // ******************************* MARK: - Public Properties
     
+    /// Disable/enable animations. Default is `true` - animations enabled.
+    public var animate = true
+    
     /// Is keyboard shown?
     public var isKeyboardShown: Bool {
         let screenBounds = c_screenBounds
@@ -118,16 +121,44 @@ public class KeyboardManager: NSObject {
         let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
         let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions().rawValue
         let animationCurve: UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
-        let options: UIView.AnimationOptions = [animationCurve, .beginFromCurrentState]
+        let animationOptions: UIView.AnimationOptions = [animationCurve, .beginFromCurrentState]
         
         keyboardFrame = keyboardEndFrame
         
         let allObjects = listeners.allObjects
-        
         let keyboardAvoidingViews = allObjects.compactMap { $0 as? KeyboardAvoidingView }
-        keyboardAvoidingViews.forEach { $0.keyboard(willChangeOverlappingFrame: keyboardOverlappingFrame, duration: duration, animationOptions: options) }
-        
         let otherViews = allObjects.filter { !($0 is KeyboardAvoidingView) }
-        otherViews.forEach { $0.keyboard(willChangeOverlappingFrame: keyboardOverlappingFrame, duration: duration, animationOptions: options) }
+        let changes: () -> Void = { [self] in
+            keyboardAvoidingViews.forEach { $0.keyboard(willChangeOverlappingFrame: keyboardOverlappingFrame, duration: duration, animationOptions: animationOptions) }
+            otherViews.forEach { $0.keyboard(willChangeOverlappingFrame: keyboardOverlappingFrame, duration: duration, animationOptions: animationOptions) }
+        }
+        
+        let hasWindow = keyboardAvoidingViews.reduce(false) { $0 || $1.window != nil }
+        
+        let acriveViewControllers = keyboardAvoidingViews
+            .compactMap { $0._viewController }
+            .filter { $0.viewState == .didAppear }
+        
+        let hasActiveViewController = !acriveViewControllers.isEmpty
+        
+        // Animate only .didAppear state to prevent broken transitions.
+        if animate && hasWindow && hasActiveViewController, duration > 0 {
+            
+            // Stop scrolling if needed
+            keyboardAvoidingViews
+                .flatMap { $0.allSubviews }
+                .compactMap { $0 as? UIScrollView }
+                .forEach { $0.stopScrolling() }
+            
+            // Assure view layouted before animations start
+            acriveViewControllers.forEach { $0.mainParent.view.layoutIfNeeded() }
+            UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: {
+                changes()
+                acriveViewControllers.forEach { $0.mainParent.view.layoutIfNeeded() }
+            }, completion: nil)
+            
+        } else {
+            changes()
+        }
     }
 }
