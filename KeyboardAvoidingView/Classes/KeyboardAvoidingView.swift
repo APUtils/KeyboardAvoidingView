@@ -122,6 +122,8 @@ open class KeyboardAvoidingView: UIView {
         // Support only views that has viewControllers for now
         guard let viewController = _viewController else { return }
         
+        // TODO: Move to manager so we can animate changes alltogether.
+        
         // Do not adjust for .notLoaded and .didLoad because will be adjusted in willAppear
         // Do not adjust for .willDisappear and .didDisappear for better disappear animation
         guard viewController.viewState == .didAppear || viewController.viewState == .willAppear || viewController.viewState == .didAttach else { return }

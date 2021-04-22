@@ -121,6 +121,13 @@ public class KeyboardManager: NSObject {
         let options: UIView.AnimationOptions = [animationCurve, .beginFromCurrentState]
         
         keyboardFrame = keyboardEndFrame
-        listeners.allObjects.forEach { $0.keyboard(willChangeOverlappingFrame: keyboardOverlappingFrame, duration: duration, animationOptions: options) }
+        
+        let allObjects = listeners.allObjects
+        
+        let keyboardAvoidingViews = allObjects.compactMap { $0 as? KeyboardAvoidingView }
+        keyboardAvoidingViews.forEach { $0.keyboard(willChangeOverlappingFrame: keyboardOverlappingFrame, duration: duration, animationOptions: options) }
+        
+        let otherViews = allObjects.filter { !($0 is KeyboardAvoidingView) }
+        otherViews.forEach { $0.keyboard(willChangeOverlappingFrame: keyboardOverlappingFrame, duration: duration, animationOptions: options) }
     }
 }
