@@ -21,7 +21,7 @@ private let c_hiddenKeyboardFrame = CGRect(x: 0, y: c_screenBounds.height, width
 
 
 /// Listener protocol
-@objc public protocol KeyboardControllerListener: class {
+@objc public protocol KeyboardControllerListener: AnyObject {
     /// Called every time keyboard frame is changed.
     /// - parameters:
     ///   - frame: New keyboard overlapping frame.
