@@ -1,1 +1,3 @@
-github "APUtils/ViewState" "1.2.1"
+github "APUtils/LogsManager" "9.1.20"
+github "APUtils/ViewState" "1.2.5"
+github "CocoaLumberjack/CocoaLumberjack" "3.7.2"

@@ -42,7 +42,7 @@ set -o pipefail && xcodebuild -project "KeyboardAvoidingView.xcodeproj" -sdk iph
 echo ""
 
 echo -e "Building with Carthage..."
-carthage build --no-skip-current --cache-builds
+carthage build --use-xcframeworks --no-skip-current --cache-builds
 echo ""
 
 echo -e "Performing tests..."

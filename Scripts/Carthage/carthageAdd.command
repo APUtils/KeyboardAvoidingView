@@ -27,8 +27,9 @@ restoreCartfiles() {
 }
 
 # Assume scripts are placed in /Scripts/Carthage dir
-base_dir=$(dirname "$0")
-cd "$base_dir"
+_script_call_path="${BASH_SOURCE%/*}"
+if [[ ! -d "${_script_call_path}" ]]; then _script_call_path=$(dirname "$0"); fi
+cd "${_script_call_path}"
 cd ..
 cd ..
 

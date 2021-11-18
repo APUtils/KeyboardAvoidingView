@@ -31,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0D47E41223BF1E5100C4BFDC /* carthageUpdate.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = carthageUpdate.command; path = ../Scripts/Carthage/carthageUpdate.command; sourceTree = "<group>"; };
+		0DF48EE72745EE64009B373F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KeyboardAvoidingView.podspec; path = ../KeyboardAvoidingView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		18C65CCE2C5294AAC77045E7 /* Pods-KeyboardAvoidingView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		28D244CF39B47C0D695EE88B /* Pods-KeyboardAvoidingView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardAvoidingView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 				B05D8C761F0FD74D0039A8B2 /* CHANGELOG.md */,
 				E26A064B224BC98D00ABD6C3 /* checkBuild.command */,
 				B0E5B41C21133D33005D8319 /* DEPLOY PROCESS.md */,
+				0DF48EE72745EE64009B373F /* Package.swift */,
 				103EE1324702B99E5DF761DC /* KeyboardAvoidingView.podspec */,
 				44D0F72030B1EC613BED2B9C /* LICENSE */,
 				0D47E41223BF1E5100C4BFDC /* carthageUpdate.command */,
@@ -258,7 +260,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -378,14 +380,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-KeyboardAvoidingView_Example/Pods-KeyboardAvoidingView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/APExtensions/APExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/KeyboardAvoidingView/KeyboardAvoidingView.framework",
-				"${BUILT_PRODUCTS_DIR}/LogsManager/LogsManager.framework",
+				"${BUILT_PRODUCTS_DIR}/RoutableLogger/RoutableLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewState/ViewState.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APExtensions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyboardAvoidingView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LogsManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RoutableLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewState.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

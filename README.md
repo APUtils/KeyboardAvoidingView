@@ -30,7 +30,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/KeyboardAvoidingView" ~> 5.1
+github "APUtils/KeyboardAvoidingView" ~> 5.2
 ```
 
 Then add both `KeyboardAvoidingView` and `ViewState` frameworks to your project. Remove `APExtensionsViewState` dependency if you previously had it.
@@ -41,7 +41,7 @@ KeyboardAvoidingView is available through [CocoaPods](http://cocoapods.org). To 
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "KeyboardAvoidingView", '~> 5.1'
+pod "KeyboardAvoidingView", '~> 5.2'
 ```
 
 #### Swift Package Manager
@@ -52,7 +52,7 @@ Once you have your Swift package set up, adding `KeyboardAvoidingView` as a depe
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/APUtils/KeyboardAvoidingView.git", .upToNextMajor(from: "5.1.0"))
+    .package(url: "https://github.com/APUtils/KeyboardAvoidingView.git", .upToNextMajor(from: "5.2.0"))
 ]
 ```
 

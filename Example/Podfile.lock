@@ -1,18 +1,19 @@
 PODS:
-  - APExtensions (10.0.0):
-    - APExtensions/Core (= 10.0.0)
-    - APExtensions/Storyboard (= 10.0.0)
-    - APExtensions/ViewConfiguration (= 10.0.0)
-  - APExtensions/Core (10.0.0):
-    - LogsManager/RoutableLogger (>= 9.1.5)
-  - APExtensions/Storyboard (10.0.0)
-  - APExtensions/ViewConfiguration (10.0.0)
-  - KeyboardAvoidingView (5.1.0):
+  - APExtensions (10.1.6):
+    - APExtensions/Core (= 10.1.6)
+    - APExtensions/Storyboard (= 10.1.6)
+    - APExtensions/ViewConfiguration (= 10.1.6)
+  - APExtensions/Core (10.1.6):
+    - RoutableLogger
+  - APExtensions/Storyboard (10.1.6)
+  - APExtensions/ViewConfiguration (10.1.6)
+  - KeyboardAvoidingView (5.2.0):
     - ViewState (>= 1.2.1)
-  - LogsManager/RoutableLogger (9.1.6)
   - Nimble (9.2.1)
   - Quick (4.0.0)
-  - ViewState (1.2.1)
+  - RoutableLogger (9.1.12)
+  - ViewState (1.2.3):
+    - RoutableLogger (>= 9.1.11)
 
 DEPENDENCIES:
   - APExtensions (from `https://github.com/APUtils/APExtensions`)
@@ -22,9 +23,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - LogsManager
     - Nimble
     - Quick
+    - RoutableLogger
     - ViewState
 
 EXTERNAL SOURCES:
@@ -35,17 +36,17 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: fa5cbedb82db880d4dbbc7991eeb661b1f59f40e
+    :commit: 085a41c04626378c75bc5d4887784121465adc9c
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
-  APExtensions: b46cab78fe5d291e1157838fd78962a886e627df
-  KeyboardAvoidingView: f0321f6a297b0db778e34a1bf19ffaaad447e72b
-  LogsManager: e93e392f0496b003edd34b00f4654c7256422eda
+  APExtensions: 63f9f31f09a8b43a52c2207774568756e3bd489f
+  KeyboardAvoidingView: acc530b2435bba760b2270e722cb7132cf1c4d31
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
-  ViewState: 2875f1b9e168a05ba14d3df1884e29333b65fe36
+  RoutableLogger: 9ad367e9a79df59c3cf5a1707ba9598ffbae8784
+  ViewState: d6492d0434d2ee6013c270c1431dbe73cc895b75
 
-PODFILE CHECKSUM: 67b9b5dad2babf83e45712c278363049e3f0b080
+PODFILE CHECKSUM: 36c7bd245cded09aecd4b5c9a3e7a67aa641a35d
 
 COCOAPODS: 1.11.2

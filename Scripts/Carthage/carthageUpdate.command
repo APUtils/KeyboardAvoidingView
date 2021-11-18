@@ -9,8 +9,9 @@ hash xcodeproj 2>/dev/null || { printf >&2 "\n${red_color}Xcodeproj is required.
 set -e
 
 # Assume scripts are placed in /Scripts/Carthage dir
-base_dir=$(dirname "$0")
-cd "$base_dir"
+_script_call_path="${BASH_SOURCE%/*}"
+if [[ ! -d "${_script_call_path}" ]]; then _script_call_path=$(dirname "$0"); fi
+cd "${_script_call_path}"
 
 # includes
 . ./utils.sh
@@ -43,7 +44,7 @@ fi
 
 # Update framework(s)
 echo "Synchronizing Carthage dependencies..."
-carthage update ${framework_name} --platform iOS --cache-builds
+carthage update ${framework_name} --use-xcframeworks --platform iOS --cache-builds
 echo ""
 
 # Update md5 check sum

@@ -9,8 +9,9 @@ performPodInstallAndCaptureOutput() {
 }
 
 # Assume scripts are placed in /Scripts/Cocoapods dir
-base_dir=$(dirname "$0")
-cd "$base_dir"
+_script_call_path="${BASH_SOURCE%/*}"
+if [[ ! -d "${_script_call_path}" ]]; then _script_call_path=$(dirname "$0"); fi
+cd "${_script_call_path}"
 
 . utils.sh
 
@@ -33,7 +34,7 @@ set -e
 # Check if repo needs update
 # * `31` Spec not found (i.e out-of-date source repos, mistyped Pod name etc...)
 echo "Exit code: ${exit_code}"
-if [ ${exit_code} -eq 31 ]; then
+if [ ${exit_code} -eq 31 ] || [ ${exit_code} -eq 1 ]; then
     echo "Fixing outdated repo"
     pod repo update
     pod_install_output=`script -q /dev/null pod install | tee /dev/fd/5`

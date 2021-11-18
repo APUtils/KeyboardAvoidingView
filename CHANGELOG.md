@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 `KeyboardAvoidingView` adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.2.0](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/5.1.2)
+Released on 2021-11-18.
+
+#### Changed
+- Layout keyboard avoiding view before calling other call backs
+
+
 ## [5.1.0](https://github.com/APUtils/KeyboardAvoidingView/releases/tag/5.1.0)
 Released on 2021-04-07.
 
