@@ -10,15 +10,10 @@ import ViewState
 import UIKit
 
 #if DEBUG
-    private let c_debugWork = false
+private let c_debugWork = false
 #else
-    private let c_debugWork = false
+private let c_debugWork = false
 #endif
-
-
-private let c_screenBounds = UIScreen.main.bounds
-private let c_hiddenKeyboardFrame = CGRect(x: 0, y: c_screenBounds.height, width: c_screenBounds.width, height: 0)
-
 
 /// Listener protocol
 @objc public protocol KeyboardControllerListener: AnyObject {
@@ -33,6 +28,12 @@ private let c_hiddenKeyboardFrame = CGRect(x: 0, y: c_screenBounds.height, width
 /// Manager that observes keyboard frame.
 public class KeyboardManager: NSObject {
     
+    // ******************************* MARK: - Private
+    
+    private var hiddenKeyboardFrame: CGRect {
+        CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 0)
+    }
+    
     // ******************************* MARK: - Class Properties
     
     @objc public static let shared = KeyboardManager()
@@ -44,17 +45,17 @@ public class KeyboardManager: NSObject {
     
     /// Is keyboard shown?
     public var isKeyboardShown: Bool {
-        let screenBounds = c_screenBounds
-        let intersection = screenBounds.intersection(keyboardFrame)
+        let screenBounds = UIScreen.main.bounds
+        let intersection = UIScreen.main.bounds.intersection(keyboardFrame)
         return !intersection.isNull
     }
     
     /// Current keyboard overlapping rect
     public var keyboardOverlappingFrame: CGRect {
-        let screenBounds = c_screenBounds
-        let intersection = screenBounds.intersection(keyboardFrame)
+        let screenBounds = UIScreen.main.bounds
+        let intersection = UIScreen.main.bounds.intersection(keyboardFrame)
         if intersection.isNull {
-            return c_hiddenKeyboardFrame
+            return hiddenKeyboardFrame
         } else {
             return intersection
         }
@@ -70,7 +71,7 @@ public class KeyboardManager: NSObject {
     private var listeners = NSHashTable<KeyboardControllerListener>(options: [.weakMemory])
     
     /// Current keyboard frame
-    private var keyboardFrame: CGRect = c_hiddenKeyboardFrame
+    private lazy var keyboardFrame: CGRect = hiddenKeyboardFrame
     
     // ******************************* MARK: - Public Methods
     
