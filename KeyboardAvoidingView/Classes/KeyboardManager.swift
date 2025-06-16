@@ -1,6 +1,6 @@
 //
 //  KeyboardManager.swift
-//  APExtensions
+//  KeyboardAvoidingView
 //
 //  Created by mac-246 on 2/16/18.
 //  Copyright © 2018 Anton Plebanovich. All rights reserved.
@@ -147,15 +147,15 @@ public class KeyboardManager: NSObject {
             
             // Stop scrolling if needed
             keyboardAvoidingViews
-                .flatMap { $0.allSubviews }
+                .flatMap { $0._allSubviews }
                 .compactMap { $0 as? UIScrollView }
-                .forEach { $0.stopScrolling() }
+                .forEach { $0._stopScrolling() }
             
             // Assure view layouted before animations start
-            acriveViewControllers.forEach { $0.mainParent.view.layoutIfNeeded() }
+            acriveViewControllers.forEach { $0._mainParent.view.layoutIfNeeded() }
             UIView.animate(withDuration: duration, delay: 0, options: animationOptions, animations: {
                 changes()
-                acriveViewControllers.forEach { $0.mainParent.view.layoutIfNeeded() }
+                acriveViewControllers.forEach { $0._mainParent.view.layoutIfNeeded() }
             }, completion: nil)
             
         } else {

@@ -22,9 +22,9 @@ extension UIView {
     #endif
     
     /// Returns all view's subviews
-    var allSubviews: [UIView] {
+    var _allSubviews: [UIView] {
         var allSubviews = self.subviews
-        allSubviews.forEach { allSubviews.append(contentsOf: $0.allSubviews) }
+        allSubviews.forEach { allSubviews.append(contentsOf: $0._allSubviews) }
         return allSubviews
     }
     
@@ -44,15 +44,15 @@ extension UIView {
 
 
 extension UIViewController {
-    var mainParent: UIViewController {
-        return parent?.mainParent ?? self
+    var _mainParent: UIViewController {
+        return parent?._mainParent ?? self
     }
 }
 
 extension UIScrollView {
     
     /// Stops current scroll
-    func stopScrolling() {
+    func _stopScrolling() {
         setContentOffset(contentOffset, animated: false)
     }
 }
