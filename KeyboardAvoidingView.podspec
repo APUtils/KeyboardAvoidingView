@@ -28,8 +28,7 @@ Common usage: set `KeyboardAvoidingView` class to any view (usually it's base co
   s.source           = { :git => 'https://github.com/APUtils/KeyboardAvoidingView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
-  s.swift_versions = ['5.1']
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'KeyboardAvoidingView/Classes/**/*'
   s.pod_target_xcconfig = { "DEFINES_MODULE" => "YES" }

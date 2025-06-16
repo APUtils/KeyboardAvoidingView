@@ -1,18 +1,38 @@
 PODS:
-  - APExtensions (10.1.6):
-    - APExtensions/Core (= 10.1.6)
-    - APExtensions/Storyboard (= 10.1.6)
-    - APExtensions/ViewConfiguration (= 10.1.6)
-  - APExtensions/Core (10.1.6):
+  - APExtensions (15.0.1):
+    - APExtensions/Core (= 15.0.1)
+    - APExtensions/Dispatch (= 15.0.1)
+    - APExtensions/Occupiable (= 15.0.1)
+    - APExtensions/OptionalType (= 15.0.1)
+    - APExtensions/Storyboard (= 15.0.1)
+    - APExtensions/ViewModel (= 15.0.1)
+  - APExtensions/Core (15.0.1):
     - RoutableLogger
-  - APExtensions/Storyboard (10.1.6)
-  - APExtensions/ViewConfiguration (10.1.6)
+  - APExtensions/Dispatch (15.0.1):
+    - RoutableLogger
+  - APExtensions/Occupiable (15.0.1)
+  - APExtensions/OptionalType (15.0.1)
+  - APExtensions/Storyboard (15.0.1):
+    - RoutableLogger
+  - APExtensions/ViewModel (15.0.1)
+  - CwlCatchException (2.2.1):
+    - CwlCatchExceptionSupport (~> 2.2.1)
+  - CwlCatchExceptionSupport (2.2.1)
+  - CwlMachBadInstructionHandler (2.2.2)
+  - CwlPosixPreconditionTesting (2.2.2)
+  - CwlPreconditionTesting (2.2.2):
+    - CwlCatchException (~> 2.2.1)
+    - CwlMachBadInstructionHandler (~> 2.2.2)
+    - CwlPosixPreconditionTesting (~> 2.2.2)
   - KeyboardAvoidingView (5.2.0):
     - ViewState (>= 1.2.1)
-  - Nimble (9.2.1)
-  - Quick (4.0.0)
-  - RoutableLogger (9.1.12)
-  - ViewState (1.2.3):
+  - Nimble (13.7.1):
+    - CwlPreconditionTesting (~> 2.2.0)
+  - Quick (7.6.2)
+  - RoutableLogger (13.0.0)
+  - ViewState (2.1.0):
+    - ViewState/Core (= 2.1.0)
+  - ViewState/Core (2.1.0):
     - RoutableLogger (>= 9.1.11)
 
 DEPENDENCIES:
@@ -22,7 +42,12 @@ DEPENDENCIES:
   - Quick
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - CwlCatchException
+    - CwlCatchExceptionSupport
+    - CwlMachBadInstructionHandler
+    - CwlPosixPreconditionTesting
+    - CwlPreconditionTesting
     - Nimble
     - Quick
     - RoutableLogger
@@ -36,17 +61,22 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APExtensions:
-    :commit: 085a41c04626378c75bc5d4887784121465adc9c
+    :commit: bdf28983549e0cdb4b60becb9323cc814c09b86a
     :git: https://github.com/APUtils/APExtensions
 
 SPEC CHECKSUMS:
-  APExtensions: 63f9f31f09a8b43a52c2207774568756e3bd489f
-  KeyboardAvoidingView: acc530b2435bba760b2270e722cb7132cf1c4d31
-  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
-  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
-  RoutableLogger: 9ad367e9a79df59c3cf5a1707ba9598ffbae8784
-  ViewState: d6492d0434d2ee6013c270c1431dbe73cc895b75
+  APExtensions: 1c783b402ac7100f54bc7073cf0e1621d3dcbc8d
+  CwlCatchException: 7acc161b299a6de7f0a46a6ed741eae2c8b4d75a
+  CwlCatchExceptionSupport: 54ccab8d8c78907b57f99717fb19d4cc3bce02dc
+  CwlMachBadInstructionHandler: dae4fdd124d45c9910ac240287cc7b898f4502a1
+  CwlPosixPreconditionTesting: ecd095aa2129e740b44301c34571e8d85906fb88
+  CwlPreconditionTesting: 67a0047dd4de4382b93442c0e3f25207f984f35a
+  KeyboardAvoidingView: 9c3624bcfdca45d52ff4227827f4a1e59e76f114
+  Nimble: 317d713c30c3336dd8571da1889f7ec3afc626e8
+  Quick: b8bec97cd4b9f21da0472d45580f763b801fc353
+  RoutableLogger: 31ce799b16b4868c169ed68c36e25437dd0ca40e
+  ViewState: dcc7032ca1a5534afac24e6d6af311b129d0f3bc
 
-PODFILE CHECKSUM: 36c7bd245cded09aecd4b5c9a3e7a67aa641a35d
+PODFILE CHECKSUM: cfb14997e409bfc7faa547177ff7813800e03dec
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.16.2

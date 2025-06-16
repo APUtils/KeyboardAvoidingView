@@ -1,5 +1,5 @@
 # Deployment Target
-platform :ios, '9.0'
+platform :ios, '14.0'
 install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 
 # Ignore pods code warnings
@@ -8,6 +8,8 @@ inhibit_all_warnings!
 # Add pods as frameworks so we could add obj-c and swift 3.0 pods
 use_frameworks!
 
+# https://github.com/CocoaPods/CocoaPods/issues/12574
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'KeyboardAvoidingView_Example' do
     pod 'KeyboardAvoidingView', :path => '../'
@@ -32,5 +34,11 @@ post_install do |installer|
   # Silence Pods project warning
   installer.pods_project.build_configurations.each do |config|
     config.build_settings['CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED'] = 'YES'
+  end
+  
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+    end
   end
 end
