@@ -40,5 +40,6 @@ Common usage: set `KeyboardAvoidingView` class to any view (usually it's base co
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.private_header_files = 'KeyboardAvoidingView/Classes/KeyboardAvoidingViewLoader.h'
   s.frameworks = 'Foundation', 'UIKit'
+  s.dependency 'RoutableLogger', '>= 12.0'
   s.dependency 'ViewState', '>= 1.2.1'
 end

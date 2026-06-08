@@ -6,14 +6,9 @@
 //  Copyright © 2018 Anton Plebanovich. All rights reserved.
 //
 
-import ViewState
+import RoutableLogger
 import UIKit
-
-#if DEBUG
-private let c_debugWork = false
-#else
-private let c_debugWork = false
-#endif
+import ViewState
 
 /// Listener protocol
 @objc public protocol KeyboardControllerListener: AnyObject {
@@ -116,7 +111,8 @@ public class KeyboardManager: NSObject {
         guard let userInfo = notification.userInfo else { return }
         guard let keyboardEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
         guard keyboardEndFrame != keyboardFrame else { return }
-        if c_debugWork { print("KeyboardManager: frame will change to \(keyboardEndFrame)") }
+        
+        RoutableLogger.logVerbose("KeyboardManager | Frame will change to \(keyboardEndFrame)")
         
         let duration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
         let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber

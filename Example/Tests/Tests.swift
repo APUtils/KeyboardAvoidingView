@@ -7,7 +7,7 @@ import KeyboardAvoidingView
 
 
 class MainSpec: QuickSpec {
-    override func spec() {
+    override static func spec() {
 //        if #available(iOS 9.0, *) {
 //            describe("KeyboardAvoidingView") {
 //                var containerView: UIView!
