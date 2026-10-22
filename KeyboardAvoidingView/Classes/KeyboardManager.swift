@@ -40,16 +40,18 @@ public class KeyboardManager: NSObject {
     
     /// Is keyboard shown?
     public var isKeyboardShown: Bool {
-        let screenBounds = UIScreen.main.bounds
         let intersection = UIScreen.main.bounds.intersection(keyboardFrame)
-        return !intersection.isNull
+        return !intersection.isEmpty
     }
     
     /// Current keyboard overlapping rect
     public var keyboardOverlappingFrame: CGRect {
-        let screenBounds = UIScreen.main.bounds
+        // An empty frame overlaps nothing, wherever it sits. iOS reports `.zero` for an undocked or floating
+        // keyboard, and when a keyboard shown by another process (`ASWebAuthenticationSession`) goes away.
+        // That rect lies inside the screen, so it intersects it: its `minY` of 0 read as a keyboard covering
+        // the whole screen.
         let intersection = UIScreen.main.bounds.intersection(keyboardFrame)
-        if intersection.isNull {
+        if intersection.isEmpty {
             return hiddenKeyboardFrame
         } else {
             return intersection
